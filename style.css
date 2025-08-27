@@ -1,0 +1,27 @@
+body {
+  font-family: calibri;
+  background: #DEB1A6;
+  color: white;
+}
+h1 {
+  text-align: center;
+}
+h2 {
+  margin: 5px;
+  padding: 5px;
+  text-align: center;
+}
+a:link {
+  color: white;
+  background-color: transparent;
+  text-decoration: none;
+}
+a:hover {
+  color: pink;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+#header {
+  font-weight: normal;
+}
