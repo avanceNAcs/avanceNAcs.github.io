@@ -1,7 +1,13 @@
 body {
+  min-height: 100vh;
   font-family: calibri;
   background: #DEB1A6;
   color: white;
+    text-shadow:
+    -1px -1px 0 black,
+     1px -1px 0 black,
+    -1px  1px 0 black,
+     1px  1px 0 black;
 }
 h1 {
   text-align: center;
