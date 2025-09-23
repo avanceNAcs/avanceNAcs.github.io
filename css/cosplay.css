@@ -1,27 +1,38 @@
 /* ✅ Mobile-first default (1 column) */
 .layout {
-    display: grid;
-    gap: 0.5rem 0.25rem;
-    grid-template-columns: 1fr;
-    grid-template-rows: 4rem auto auto 3rem;
-    grid-template-areas:
+  display: grid;
+  gap: 0.5rem 0.25rem;
+  grid-template-columns: 1fr;
+  grid-template-rows: 4rem auto auto 3rem;
+  grid-template-areas:
     "header"
     "nav"
     "main"
     "footer";
-    height: 100vh;
-    padding: 5px;
+  min-height: 100vh;   /* safer than height: 100vh */
+  padding: 5px;
 }
 
-/* ✅ Wider screens (desktop/tablet layout) */
+/* ✅ Tablet screens (≥600px → 2 columns) */
+@media (min-width: 600px) {
+  .layout {
+    grid-template-columns: 160px auto;
+    grid-template-rows: 60px auto 40px;
+    grid-template-areas:
+      "header header"
+      "nav main"
+      "footer footer";
+  }
+}
+
+/* ✅ Desktop screens (≥800px → 3 columns) */
 @media (min-width: 800px) {
-    .layout {
-        grid-template-columns: 160px auto 200px;
-        grid-template-rows: 60px auto  40px;
-        grid-template-areas:
+  .layout {
+    grid-template-columns: 160px auto 200px;
+    grid-template-rows: 60px auto 40px;
+    grid-template-areas:
       "header header header"
       "nav main main"
       "footer footer footer";
-    }
-
+  }
 }
