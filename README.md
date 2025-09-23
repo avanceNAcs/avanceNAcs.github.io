@@ -26,7 +26,7 @@ avancenacs/github.io structure
    ├─ index.html
    |
    ├─ /js/
-   │   ├─ script.js       ← global JS
+   │   ├─ resume.js       ← global JS
    │   ├─ cosplay.js      ← cosplay page JS
    │   ├─ gameOn.js       ← gameOn page JS
    │   ├─ sceneIt.js      ← sceneIt page JS

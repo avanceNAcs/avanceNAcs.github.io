@@ -1,59 +1,3 @@
-/* Full-page background */
-html, body {
-    height: 100vh;
-    margin: 0;
-    padding: 0;
-    font-family: monospace, "Lucida Sans Typewriter";
-    background-image: url("../assets/images/fairyNight_bkg.jpg"); /* adjust path if needed */
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-}
-header {
-    /*background: #85a2dd;*/
-    opacity: 80%;
-    color: #fff;
-    padding: 2rem 0;
-    text-align: left;
-    font-stretch: extra-expanded;
-    border-radius: 11px;
-}
-footer {
-    background: #eee;
-    text-align: center;
-    padding: 1rem 0;
-    font-size: 0.9rem;
-    color: #888;
-    opacity: 50%;
-    border-radius: 11px;
-}
-
-nav,aside {
-    margin: 2px;
-    background: #c7a4c9;
-    opacity: 50%;
-    border-radius: 13px;
-}
-nav {
-    background: #85a2dd;
-}
-main {
-    grid-area: main;
-    background: #ffafc0;
-    opacity: 50%;
-    border-radius: 13px;
-
-}
-h1 {
-    margin: 0;
-}
-h3, h4 {
-    text-align: center;
-    text-underline: #c7a4c9;
-}
-p {
-    margin: 10px;
-}
 /* ✅ Mobile-first default (1 column) */
 .layout {
     display: grid;
@@ -72,7 +16,7 @@ p {
 }
 
 /* ✅ Wider screens (desktop/tablet layout) */
-@media (min-width: 750px) {
+@media (min-width: 800px) {
     .layout {
         grid-template-columns: 160px auto 200px;
         grid-template-rows: 60px auto auto 40px;
@@ -117,10 +61,14 @@ p {
     color: white;
     border-style: solid;
     border-width: 2px;
-    font-family: monospace, "Lucida Sans Typewriter";
-    font-size: 25px;
+    font-size: 15px;
 }
 
 #findMe {
     margin: 10px;
+}
+
+#findMe a, img {
+    height: 25px;
+    width: 25px;
 }
