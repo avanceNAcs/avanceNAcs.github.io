@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <script src="https://kit.fontawesome.com/b15736f354.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+        <link rel="stylesheet" href="../css/style.css">
+        <title>Resume</title>
+    </head>
+    <body>
+      <h1>Sofia Avancena</h1>
+      <div id="header">
+        <h2>
+          <i class="fa-solid fa-house"></i> Binbrook, ON ||
+          <i class="fa-regular fa-envelope"></i> <a href="mailto:micaellaavancena@gmail.com" target="_blank">micaellaavancena@gmail.com</a> ||
+          <i class="fa-solid fa-phone"></i> 416-684-8565
+          <br><i class="fa-brands fa-linkedin"></i> <a href="https://www.linkedin.com/in/sofia-avancena/" target="_blank">sofia-avancena</a>
+          <i class="fa-brands fa-github"></i> <a href="https://github.com/avanceNAcs" target="_blank">avanceNAcs</a>
+        </h2>
+      </div>
+    </body>
+
+
+    <input type="file" id="upload" />
+    <h2>Work Experience</h2>
+    <div id="work-experience" style="border:1px solid #ccc; padding:10px; margin-bottom:20px;"></div>
+
+    <h2>Education</h2>
+    <div id="education" style="border:1px solid #ccc; padding:10px;"></div>
+
+      <h2>College Projects</h2>
+    <div id="projects" style="border:1px solid #ccc; padding:10px;"></div>
+
+    <script src="https://unpkg.com/mammoth/mammoth.browser.min.js"></script>
+
+    <script>
+    document.getElementById("upload").addEventListener("change", function(event) {
+      const file = event.target.files[0];
+      if (!file) return;
+
+      const reader = new FileReader();
+      reader.onload = function(e) {
+        mammoth.convertToHtml({ arrayBuffer: e.target.result })
+          .then(result => {
+            const html = result.value;
+            const container = document.createElement('div');
+            container.innerHTML = html;
+
+            // Function to extract a section by heading text
+            function extractSection(headingText) {
+              const headings = container.querySelectorAll("h1, h2, h3, h4");
+              for (let h of headings) {
+                if (h.textContent.toLowerCase().includes(headingText.toLowerCase())) {
+                  let sectionHTML = "";
+                  let sibling = h.nextElementSibling;
+                  while (sibling && !/^H[1-4]$/i.test(sibling.tagName)) {
+                    sectionHTML += sibling.outerHTML;
+                    sibling = sibling.nextElementSibling;
+                  }
+                  return sectionHTML;
+                }
+              }
+              return "<p>No section found.</p>";
+            }
+
+            // Insert extracted sections into their divs
+            document.getElementById("work-experience").innerHTML = extractSection("Experience");
+            document.getElementById("education").innerHTML = extractSection("Education");
+          document.getElementById("projects").innerHTML = extractSection("College Projects");
+          })
+          .catch(err => console.error(err));
+      };
+      reader.readAsArrayBuffer(file);
+    });
+    </script>
+</html>
