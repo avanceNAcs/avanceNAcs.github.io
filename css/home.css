@@ -100,3 +100,20 @@ button:active, .project-card a:active {
 
 .project-card:hover {
   background: #f0f
+  
+  #skills ul.skills-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+#skills ul.skills-list li {
+  background: linear-gradient(to right, #fae1ac, #f4bebe);
+  border: 2px solid #f4bebe;
+  border-radius: 6px;
+  padding: 0.4rem 0.8rem;
+  font-size: 0.85rem;
+  font-family: 'Press Start 2P', monospace;
+}
