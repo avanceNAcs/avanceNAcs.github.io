@@ -94,3 +94,9 @@ p {
     font-size: 15px;
     font-family: monospace;
 }
+@media (max-width: 799px) {
+  body {
+    background-repeat: repeat;
+    background-size: auto;
+  }
+}
