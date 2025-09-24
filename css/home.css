@@ -1,74 +1,102 @@
-/* ✅ Mobile-first default (1 column) */
-.layout {
-    display: grid;
-    gap: 0.5rem 0.25rem;
-    grid-template-columns: 1fr;
-    grid-template-rows: 4rem auto auto auto auto 3rem;
-    grid-template-areas:
-    "header"
-    "nav"
-    "aside1"
-    "main"
-    "aside2"
-    "footer";
-    height: 100vh;
-    padding: 5px;
+/* --- GLOBAL 95 VIBES --- */
+body {
+  background-color: #c0c0c0; /* classic Win95 grey */
+  font-family: 'Press Start 2P', monospace;
+  font-size: 12px;
+  color: #000;
 }
 
-/* ✅ Wider screens (desktop/tablet layout) */
-@media (min-width: 800px) {
-    .layout {
-        grid-template-columns: 160px auto 200px;
-        grid-template-rows: 60px auto auto 40px;
-        grid-template-areas:
-      "header header header"
-      "nav main aside2"
-      "aside1 main aside2"
-      "footer footer footer";
-    }
-
+/* --- RETRO BOXES --- */
+.window {
+  background: #fff;
+  border: 2px solid #000;
+  border-right-color: #7d7d7d;
+  border-bottom-color: #7d7d7d;
+  border-left-color: #fff;
+  border-top-color: #fff;
+  box-shadow: inset -1px -1px #fff, inset 1px 1px #7d7d7d;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
 }
 
-/* https://www.geeksforgeeks.org/css/how-to-change-image-color-in-css/ */
-.icons {
-    position: relative;
-    display: inline-block;
-    invert(100%);
-}
-.icons img {
-    display: block;
-}
-.icons::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: pink; /* pink overlay with 50% opacity */
-    opacity: 90%;
-    mix-blend-mode: multiply;
+/* --- HEADER / TITLE BAR --- */
+header {
+  background: linear-gradient(to right, navy, #000080);
+  color: #fff;
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border: 2px solid #000;
+  border-bottom: none;
 }
 
-#dateWidget {
-    margin: 10px;
-    background-image: linear-gradient(to right, #fae1ac, #f4bebe); ;
-    width: 120px;
-    text-align: center;
-    border-radius: 10px;
-    line-height: 1.5;
-    padding: 25px;
-    color: white;
-    border-style: solid;
-    border-width: 2px;
-    font-size: 15px;
+header h1 {
+  margin: 0;
+  font-size: 1rem;
+  text-transform: uppercase;
 }
 
-#findMe {
-    margin: 10px;
+header .tagline {
+  font-size: 0.6rem;
+  margin-top: 0.25rem;
+  color: #e0e0e0;
 }
 
-#findMe img {
-    height: 25px;
-    width: 25px;
+/* --- NAV BAR --- */
+nav {
+  background: #dcdcdc;
+  border: 2px outset #fff;
+  padding: 0.5rem;
 }
+
+nav h4 {
+  font-size: 0.7rem;
+  margin-bottom: 0.5rem;
+}
+
+.navLink {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.3rem;
+  margin: 0.2rem 0;
+  background: #e0e0e0;
+  border: 2px outset #fff;
+  text-decoration: none;
+  color: #000;
+}
+
+.navLink:hover {
+  background: #bfbfbf;
+}
+
+/* --- BUTTON STYLE LINKS --- */
+button, .project-card a {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 0.6rem;
+  background: #dcdcdc;
+  border: 2px outset #fff;
+  padding: 0.4rem 0.8rem;
+  cursor: pointer;
+  text-decoration: none;
+  color: #000;
+  display: inline-block;
+}
+
+button:active, .project-card a:active {
+  border: 2px inset #fff;
+  background: #bfbfbf;
+}
+
+/* --- PROJECT CARDS --- */
+.project-card {
+  background: #fff;
+  border: 2px outset #fff;
+  padding: 1rem;
+  text-align: center;
+}
+
+.project-card:hover {
+  background: #f0f
