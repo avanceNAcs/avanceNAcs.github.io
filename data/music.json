@@ -1,0 +1,17 @@
+[
+  {
+  "title": "Thousand Stars",
+  "cover": "../assets/images/covers/HereWeGo.png",
+  "file": "../assets/audio/ThousandStars.mp3"
+  },
+  {
+    "title": "Matryoshka",
+    "cover": "../assets/images/covers/Gumi.png",
+    "file": "../assets/audio/Matryoshka.mp3"
+  },
+  {
+    "title": "I Know You're Leaving",
+    "cover": "../assets/images/covers/CaughtUpAgain.png",
+    "file": "../assets/audio/IKnowYou'reLeaving.mp3"
+  }
+]

@@ -1,0 +1,6 @@
+.game-container {
+    margin: 10px 0;
+    padding: 0.5rem;
+    border: 2px outset #fff;
+    border-radius: 8px;
+}

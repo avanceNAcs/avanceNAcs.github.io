@@ -1,34 +1,22 @@
+/* ---------- GLOBAL RESET ---------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 /* Full-page background */
 html, body {
     height: 100vh;
     margin: 0;
     padding: 0;
     font-family: 'Press Start 2P', monospace;
-    background-image: url("../assets/images/bkgs/fairyNight_bkg.jpg"); /* adjust path if needed */
+    background-image: url("../assets/images/bkgs/fairyNight_bkg.jpg");
     background-repeat: repeat;
     background-size: cover;
     background-position: center;
 }
-header {
-    /*background: #85a2dd;*/
-    opacity: 80%;
-    color: #fff;
-    padding: 2rem 0;
-    text-align: left;
-    font-stretch: extra-expanded;
-    border-radius: 11px;
-}
-footer {
-    background: #eee;
-    text-align: center;
-    padding: 1rem 0;
-    font-size: 0.9rem;
-    color: #888;
-    opacity: 50%;
-    border-radius: 11px;
-}
-
-header, nav, main {
+header, nav, main, aside, footer {
     margin: 2px;
     background: #c7a4c9;
     opacity: 50%;
@@ -38,18 +26,80 @@ header, nav, main {
     height: fit-content;
 }
 
-nav {
-    background: #dcdcdc;
-    /*border: 2px outset #fff;*/
-    padding: 0.5rem;
-    height: fit-content;
+/* ---------- LAYOUT AREAS ---------- */
+header { grid-area: header; padding: 0.5rem; background: linear-gradient(to right,#c7a4c9,#85a2dd); opacity: 60%; text-align: center; }
+footer { grid-area: footer; padding: 0.5rem; background: #eee; opacity: 50%; text-align: center; font-size: 0.9rem; }
+nav { grid-area: nav; padding: 0.5rem; background: #dcdcdc; }
+main { grid-area: main; padding: 0.5rem; background: #ffafc0; }
+aside { grid-area: aside1; padding: 0.5rem; background: #c7a4c9; }
+aside#aside2 { grid-area: aside2; background: #c7a4c9; }
+
+/* ---------- MOBILE / DEFAULT ---------- */
+body.layout-2col {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "header"
+        "nav"
+        "main"
+        "footer";
+    gap: 0.5rem;
 }
 
-nav h4 {
-    font-size: 0.7rem;
-    margin-bottom: 0.5rem;
+body.layout-3col {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    grid-template-rows: auto auto auto auto auto;
+    grid-template-areas:
+        "header header"
+        "nav aside2"
+        "main main"
+        "aside1 aside1"
+        "footer footer";
+    gap: 0.5rem 0.25rem;
+    font-size: 15px;
 }
 
+/*!* ---------- TABLET / MEDIUM SCREENS ---------- *!*/
+/*@media (min-width: 600px) {*/
+/*    body.layout-2col {*/
+/*        grid-template-columns: 160px auto;*/
+/*        grid-template-areas:*/
+/*            "header header"*/
+/*            "nav main"*/
+/*            "footer footer";*/
+/*    }*/
+/*    body.layout-3col {*/
+/*        grid-template-columns: 200px 1fr 200px;*/
+/*        grid-template-areas:*/
+/*            "header header header"*/
+/*            "nav main aside2"*/
+/*            "aside1 main aside2"*/
+/*            "footer footer footer";*/
+/*    }*/
+/*}*/
+
+/* ---------- DESKTOP / LARGE SCREENS ---------- */
+@media (min-width: 900px) {
+    body.layout-2col {
+        grid-template-columns: 160px auto;
+        grid-template-areas:
+            "header header"
+            "nav main"
+            "footer footer";
+    }
+    body.layout-3col {
+        grid-template-columns: 200px 1fr 200px;
+        grid-template-areas:
+            "header header header"
+            "nav main aside2"
+            "aside1 main aside2"
+            "footer footer footer";
+    }
+}
+
+/* ---------- NAVIGATION ---------- */
+nav h4 { font-size: 0.7rem; margin-bottom: 0.5rem; }
 .navLink {
     display: flex;
     align-items: center;
@@ -62,75 +112,24 @@ nav h4 {
     color: #000;
     font-size: 10px;
 }
+.navLink:hover { background: #bfbfbf; }
+.navLink img { width: 30px; height: 30px; }
 
-.navLink:hover {
-    background: #bfbfbf;
-}
+/* ---------- TYPOGRAPHY ---------- */
+h1 { font-size: 20px; margin-bottom: 0.5rem; }
+h3, h4 { text-align: center; font-size: 12px; }
+p { margin: 10px; font-size: 15px; }
 
-/*nav {*/
-/*    background: #dcdcdc;*/
-/*}*/
-/*.navLink {*/
-/*    display: flex;*/
-/*    align-items: center;*/
-/*    gap: 8px;*/
-
-/*    padding: 8px 12px;*/
-/*    margin: 6px 0;*/
-/*    background-color: #bdacb4; !* default *!*/
-/*    color: #000;*/
-/*    text-decoration: none;*/
-/*    border: 1px solid #000;*/
-/*    border-radius: 0; !* square edges for pixel style *!*/
-/*    font-family: 'Press Start 2P', monospace; !* Optional: pixel font *!*/
-/*    font-size: 10px;*/
-/*    image-rendering: pixelated; !* for pixel icons *!*/
-/*    transition: none; !* no smooth effects *!*/
-/*}*/
-
-.navLink img {
-    width: 30px;
-    height: 30px;
-    opacity: 100%;
+/* ---------- BUTTONS ---------- */
+button {
+    font-family: 'Press Start 2P', monospace;
+    font-size: 0.6rem;
+    background: #dcdcdc;
+    border: 2px outset #fff;
+    padding: 0.4rem 0.8rem;
+    cursor: pointer;
+    text-decoration: none;
+    color: #000;
+    display: inline-block;
 }
-
-/*.navLink:hover,*/
-/*.navLink:focus {*/
-/*    background-color: #f4bebe;*/
-/*    outline: 1px solid #000;*/
-/*    outline-offset: -2px;*/
-/*}*/
-
-/*.navLink:active {*/
-/*    background-color: #f4bebe;*/
-/*    transform: translateY(1px); !* subtle press effect *!*/
-/*}*/
-
-main {
-    grid-area: main;
-    background: #ffafc0;
-}
-h1 {
-    margin: 0;
-    font-size: 20px;
-}
-h3, h4 {
-    text-align: center;
-    text-underline: #c7a4c9;
-    font-size: 12px;
-}
-p {
-    margin: 10px;
-    font-size: 15px;
-    font-family: monospace;
-}
-@media (max-width: 600px) {
-  body {
-    background-repeat: repeat;
-    background-size: auto;
-  }
-    aside, main{
-        background-color: #c7a4c9;
-        opacity: 50%;
-    }
-}
+button:active { border: 2px inset #fff; background: #bfbfbf; }
