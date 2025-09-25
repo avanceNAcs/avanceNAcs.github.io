@@ -5,7 +5,7 @@ html, body {
     padding: 0;
     font-family: 'Press Start 2P', monospace;
     background-image: url("../assets/images/fairyNight_bkg.jpg"); /* adjust path if needed */
-    background-repeat: no-repeat;
+    background-repeat: repeat;
     background-size: cover;
     background-position: center;
 }
@@ -99,4 +99,8 @@ p {
     background-repeat: repeat;
     background-size: auto;
   }
+    aside, main{
+        background-color: #c7a4c9;
+        opacity: 50%;
+    }
 }
