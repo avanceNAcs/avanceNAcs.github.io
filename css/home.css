@@ -49,6 +49,7 @@ nav {
   background: #dcdcdc;
   border: 2px outset #fff;
   padding: 0.5rem;
+  height: fit-content;
 }
 
 nav h4 {
@@ -133,29 +134,25 @@ button:active, .project-card a:active {
     font-size: 0.75rem;
     white-space: nowrap;
 }
-
-
-#dateWidget {
-    margin-top: 200px;
-    background-color: #d3e7a3;
-    width: 120px;
-    text-align: center;
-    border-radius: 10px;
-    line-height: 1.5;
-    padding: 25px;
-    color: white;
-    border-style: solid;
-    border-width: 5px;
-    border-color: #ffafc0;
-    font-family: "My Font", sans-serif;
-    font-size: 25px;
-}
-
 #findMe {
     margin: 10px;
     display: flex;
     flex-direction: column; /* stack children vertically */
     gap: 0.5rem;            /* space between h4 and icons row */
+}
+
+
+
+#dateWidget {
+    background-color: #d3e7a3;
+    margin: auto;
+    text-align: center;
+    border-radius: 10px;
+    line-height: 1.5;
+    padding: 25px;
+    color: white;
+    border-width: 5px;
+    font-size: 25px;
 }
 
 .icons-row {
@@ -178,15 +175,14 @@ button:active, .project-card a:active {
 /* Mobile-first default (stacked) */
 .layout {
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto auto auto auto auto;
+    grid-template-columns: 60% 40%;
+    grid-template-rows: auto auto auto auto auto;
     grid-template-areas:
-        "header"
-        "aside2"
-        "nav"
-        "main"
-        "aside1"
-        "footer";
+        "header header"
+        "nav aside2"
+        "main main"
+        "aside1 aside1"
+        "footer footer";
     gap: 0.5rem 0.25rem;
     border: 2px solid black;
     font-size: 15px;
