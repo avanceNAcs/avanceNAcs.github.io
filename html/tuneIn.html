@@ -5,26 +5,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tune In</title>
     <link rel="stylesheet" href="../css/styles.css">
-    <link rel="stylesheet" href="../css/cosplay.css">
+    <link rel="stylesheet" href="../css/tuneIn.css">
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 </head>
-<body>
-    <div class="layout">
-        <header style="grid-area: header;">
-            <h1>tune in with sofie</h1>
-        </header>
-        <nav id="navbar"></nav>
-        <main style="grid-area: main;">
-            <article>
-                <h3>~welcome~</h3>
-                <p>working on a music player that calls an API to detect lyrics from the audio</p>
-            </article>
-        </main>
-        <footer style="grid-area: footer;">
-            &copy; 2025 avanceNAcs
-        </footer>
-    </div>
+<body class="layout-2col">
+
+    <!-- HEADER -->
+    <header>
+        <h1>tune in with sofie</h1>
+    </header>
+
+    <!-- NAVIGATION -->
+    <nav id="navbar"></nav>
+
+    <!-- MAIN CONTENT -->
+    <main>
+        <article>
+            <h3>~welcome~</h3>
+            <p>working on a music player that calls an API to detect lyrics from the audio</p>
+        </article>
+
+        <section id="music-player">
+            <div class="mp3-player" id="player">
+                <div class="cover-wrap">
+                    <img id="cover" class="cover" src="" alt="cover image">
+                </div>
+                <div class="info">
+                    <div id="title" class="title">Loading…</div>
+                    <div class="time-row">
+                        <span id="currentTime">0:00</span>
+                        <div id="progressContainer" class="progress-container" aria-label="progress bar">
+                            <div id="progress" class="progress"></div>
+                        </div>
+                        <span id="duration">0:00</span>
+                    </div>
+                    <div class="controls">
+                        <button id="prev" class="btn" title="Previous">⏮</button>
+                        <button id="play" class="btn play-btn" title="Play / Pause">▶</button>
+                        <button id="next" class="btn" title="Next">⏭</button>
+                    </div>
+                </div>
+                <audio id="audio"></audio>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        &copy; 2025 avanceNAcs
+    </footer>
+
+    <!-- SCRIPTS -->
+    <script src="../js/musicPlayer.js"></script>
     <script src="../js/navbar.js"></script>
-    <script src="../js/audio.js"></script>
+    <!-- <script src="../js/audio.js"></script> -->
 </body>
 </html>

@@ -1,86 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sofia Avanceña — Portfolio</title>
-  <link rel="stylesheet" href="../css/styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sofia Avanceña — Portfolio</title>
+    <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../css/home.css">
-  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 </head>
-<body>
-  <div class="layout">
+<body class="layout-3col">
 
     <!-- HEADER -->
-    <header style="grid-area: header;">
-      <h1>avancenacs</h1><h2>Advancing where Nothing else Applies</h2>
-      <p class="tagline">SQL • ERP • Web Developer</p>
+    <header>
+        <h1>avancenacs</h1>
+        <h2>Advancing where Nothing else Applies</h2>
+        <p class="tagline">SQL • ERP • Web Developer</p>
     </header>
 
     <!-- NAVIGATION -->
-<!--    <nav style="grid-area: nav;">-->
-<!--      <h4>navigation</h4>-->
-<!--      <a class="navLink click" href="home.html"><img src="../assets/images/icons/home_icon.png" alt="home"/>home</a>-->
-<!--      <a class="navLink click" href="cosplay.html"><img src="../assets/images/icons/cosplay_icon.png" alt="cosplay"/>cosplay</a>-->
-<!--      <a class="navLink click" href="arcade.html"><img src="../assets/images/icons/gameOn_icon.png" alt="gameOn"/>gameOn</a>-->
-<!--      <a class="navLink click" href="sceneIt.html"><img src="../assets/images/icons/sceneIt_icon.png" alt="sceneIt"/>sceneIt</a>-->
-<!--      <a class="navLink click" href="tuneIn.html"><img src="../assets/images/icons/tuneIn_icon.jpg" alt="tuneIn"/>tuneIn</a>-->
-<!--    </nav>-->
-      <nav id="navbar"></nav>
+    <nav id="navbar"></nav>
 
-    <!-- OPTIONAL DECORATIVE ASIDE -->
-      <aside id="projects" style="grid-area: aside1;">
-          <h3>Featured Projects</h3>
-          <div class="project-card-container">
-              <a class="project-card click" data-href="cosplay.html">
-                  <h4>Cosplay</h4>
-                  <p>WIP: My creative builds and tutorials.</p>
-              </a>
+    <!-- LEFT ASIDE: Projects -->
+    <aside id="aside1">
+        <h3>Featured Projects</h3>
+        <div class="project-card-container">
+            <a class="project-card click" data-href="cosplay.html">
+                <h4>Cosplay</h4>
+                <p>WIP: My creative builds and tutorials.</p>
+            </a>
+            <a class="project-card click" data-href="arcade.html">
+                <h4>GameOn</h4>
+                <p>WIP: Mini-games and interactive experiments.</p>
+            </a>
+            <a class="project-card click" data-href="sceneIt.html">
+                <h4>SceneIt</h4>
+                <p>WIP: My watchlist, thoughts, and information.</p>
+            </a>
+            <a class="project-card click" data-href="tuneIn.html">
+                <h4>TuneIn</h4>
+                <p>WIP: Music tools and lyric generator.</p>
+            </a>
+        </div>
+        <div class="project-controls">
+            <button id="prevProject" class="click" data-href="prevProject.html">← Prev</button>
+            <button id="nextProject" class="click" data-href="nextProject.html">Next →</button>
+        </div>
+    </aside>
 
-              <a class="project-card click" data-href="arcade.html">
-                  <h4>GameOn</h4>
-                  <p>WIP: Mini-games and interactive experiments.</p>
-              </a>
+    <!-- MAIN CONTENT -->
+    <main>
+        <article>
+            <h2>~ welcome ~</h2>
+            <p>Hi! I’m <strong>Sofia Avanceña</strong>.<br>
+                I’ve been coding since 2018 and love mixing creativity with tech.<br>
+                This portfolio is a collection of my projects, from coding experiments to cosplay tutorials.</p>
+        </article>
 
-              <a class="project-card click" data-href="sceneIt.html">
-                  <h4>SceneIt</h4>
-                  <p>WIP: My watchlist, thoughts, and information.</p>
-              </a>
+        <!-- About Me -->
+        <section id="about">
+            <h3>About Me</h3>
+            <p>I’m a developer and designer who enjoys building playful and interactive experiences.
+                When I’m not coding, you’ll find me eating, cosplaying, consuming media, or listening to music.</p>
+        </section>
 
-              <a class="project-card click" data-href="tuneIn.html">
-                  <h4>TuneIn</h4>
-                  <p>WIP: Music tools and lyric generator.</p>
-              </a>
-          </div>
-
-          <div class="project-controls">
-              <button id="prevProject" class="click" data-href="prevProject.html">← Prev</button>
-              <button id="nextProject" class="click" data-href="nextProject.html">Next →</button>
-          </div>
-      </aside>
-
-
-
-      <!-- MAIN CONTENT -->
-    <main style="grid-area: main;">
-      <article>
-        <h2>~ welcome ~</h2>
-        <p>Hi! I’m <strong>Sofia Avanceña</strong>.<br>
-           I’ve been coding since 2018 and love mixing creativity with tech.<br>
-           This portfolio is a collection of my projects, from coding experiments to cosplay tutorials.</p>
-      </article>
-
-      <!-- About Me -->
-      <section id="about">
-        <h3>About Me</h3>
-        <p>I’m a developer and designer who enjoys building playful and interactive experiences.  
-           When I’m not coding, you’ll find me eating, cosplaying, consuming media, or listening to music.</p>
-      </section>
-
-      <!-- Skills -->
+        <!-- Skills -->
         <section id="skills">
             <h3>Skills</h3>
-
             <div class="skills-container">
                 <h4>Tech Stack</h4>
                 <ul class="skills-list">
@@ -94,7 +79,6 @@
                     <li>ERP Development</li>
                     <li>Documentation</li>
                 </ul>
-
                 <h4>Other Skills</h4>
                 <ul class="skills-list">
                     <li>Project Management</li>
@@ -104,48 +88,51 @@
                 </ul>
             </div>
         </section>
+
+        <!-- Work Experience -->
         <section id="work-experience">
             <h3>Work Experience</h3>
-
             <div id="experience-scrollbox">
                 <div id="experience-container"></div>
             </div>
         </section>
     </main>
 
-    <!-- SIDE WIDGETS -->
-    <aside style="grid-area: aside2;">
-      <div id="dateWidget">
-        <span class="line" id="weekday"></span>
-        <span class="line" id="month"></span>
-        <span class="line" id="day"></span>
-      </div>
+    <!-- RIGHT ASIDE: Date & Find Me -->
+    <aside id="aside2">
+        <div id="dateWidget">
+            <span class="line" id="weekday"></span>
+            <span class="line" id="month"></span>
+            <span class="line" id="day"></span>
+        </div>
 
-      <div id="findMe">
-        <h4>find me!</h4>
-          <div class="icons-row">
-            <a class="icons click" href="mailto:avancenacs@gmail.com" target="_blank">
-              <img src="../assets/images/windows95_icons/Icons/Gmail.png" alt="gmail"/>
-            </a>
-            <a class="icons click" href="https://www.instagram.com/avancenacs/" target="_blank">
-              <img src="../assets/images/windows95_icons/Icons/Instagram.png" alt="instagram"/>
-            </a>
-            <a class="icons click" href="https://www.linkedin.com/in/avancenacs/" target="_blank">
-              <img src="../assets/images/windows95_icons/Icons/LinkedIn.png" alt="linkedin"/>
-            </a>
-          </div>
-      </div>
+        <div id="findMe">
+            <h4>find me!</h4>
+            <div class="icons-row">
+                <a class="icons click" href="mailto:avancenacs@gmail.com" target="_blank">
+                    <img src="../assets/images/windows95_icons/Icons/Gmail.png" alt="gmail"/>
+                </a>
+                <a class="icons click" href="https://www.instagram.com/avancenacs/" target="_blank">
+                    <img src="../assets/images/windows95_icons/Icons/Instagram.png" alt="instagram"/>
+                </a>
+                <a class="icons click" href="https://www.linkedin.com/in/avancenacs/" target="_blank">
+                    <img src="../assets/images/windows95_icons/Icons/LinkedIn.png" alt="linkedin"/>
+                </a>
+            </div>
+        </div>
     </aside>
 
     <!-- FOOTER -->
-    <footer style="grid-area: footer;">
-      <p>&copy; 2025 avanceNAcs — built with 💻 &amp; 🎨 by Sofia</p>
+    <footer>
+        <p>&copy; 2025 avanceNAcs — built with 💻 & 🎨 by Sofia</p>
     </footer>
-  </div>
-  <script src="../js/dateWidget.js"></script>
-  <script src="../js/audio.js"></script>
-  <script src="../js/navbar.js"></script>
-  <script src="../js/projectsCarousel.js"></script>
-  <script src="../js/workExperience.js"></script>
+
+    <!-- SCRIPTS -->
+    <script src="../js/dateWidget.js"></script>
+    <script src="../js/audio.js"></script>
+    <script src="../js/navbar.js"></script>
+    <script src="../js/projectsCarousel.js"></script>
+    <script src="../js/workExperience.js"></script>
+
 </body>
 </html>

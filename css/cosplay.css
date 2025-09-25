@@ -1,38 +1,11 @@
-/* ✅ Mobile-first default (1 column) */
-.layout {
-  display: grid;
-  gap: 0.5rem 0.25rem;
-  grid-template-columns: 1fr;
-  grid-template-rows: 4rem auto auto 3rem;
-  grid-template-areas:
-    "header"
-    "nav"
-    "main"
-    "footer";
-  min-height: 100vh;   /* safer than height: 100vh */
-  padding: 5px;
+.cosplay-card {
+    display: block;
+    width: 100%;
+    padding: 0.8rem;
+    background: rgba(255,255,255,0.9);
+    border: 2px outset #fff;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s;
 }
-
-/* ✅ Tablet screens (≥600px → 2 columns) */
-@media (min-width: 600px) {
-  .layout {
-    grid-template-columns: 160px auto;
-    grid-template-rows: 60px auto 40px;
-    grid-template-areas:
-      "header header"
-      "nav main"
-      "footer footer";
-  }
-}
-
-/* ✅ Desktop screens (≥1000px → 3 columns) */
-@media (min-width: 1000px) {
-  .layout {
-    grid-template-columns: 160px auto 200px;
-    grid-template-rows: 60px auto 40px;
-    grid-template-areas:
-      "header header header"
-      "nav main main"
-      "footer footer footer";
-  }
-}
+.cosplay-card:hover { border: 2px inset #fff; background: rgba(255,255,255,0.95); }
