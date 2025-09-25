@@ -6,6 +6,16 @@ body {
   color: #000;
 }
 
+header, nav,aside, main, footer {
+    margin: 2px;
+    background: #c7a4c9;
+    opacity: 50%;
+    border: 2px outset #fff;
+    border-radius: 13px;
+    padding: 0.5rem;
+    height: fit-content;
+}
+
 /* --- RETRO BOXES --- */
 .window {
   background: #fff;
@@ -21,14 +31,14 @@ body {
 
 /* --- HEADER / TITLE BAR --- */
 header {
-  background: linear-gradient(to right, navy, #000080);
+  background: linear-gradient(to right, #c7a4c9, #85a2dd);
   color: #fff;
+    opacity: 60%;
   padding: 0.5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  border: 2px solid #000;
   border-bottom: none;
 }
 
@@ -45,32 +55,33 @@ header .tagline {
 }
 
 /* --- NAV BAR --- */
-nav {
-  background: #dcdcdc;
-  border: 2px outset #fff;
-  padding: 0.5rem;
-}
+/*nav {*/
+/*  background: #dcdcdc;*/
+/*  border: 2px outset #fff;*/
+/*  padding: 0.5rem;*/
+/*  height: fit-content;*/
+/*}*/
 
-nav h4 {
-  font-size: 0.7rem;
-  margin-bottom: 0.5rem;
-}
+/*nav h4 {*/
+/*  font-size: 0.7rem;*/
+/*  margin-bottom: 0.5rem;*/
+/*}*/
 
-.navLink {
-  display: flex;
-  align-items: center;
-  gap: 0.3rem;
-  padding: 0.3rem;
-  margin: 0.2rem 0;
-  background: #e0e0e0;
-  border: 2px outset #fff;
-  text-decoration: none;
-  color: #000;
-}
+/*.navLink {*/
+/*  display: flex;*/
+/*  align-items: center;*/
+/*  gap: 0.3rem;*/
+/*  padding: 0.3rem;*/
+/*  margin: 0.2rem 0;*/
+/*  background: #e0e0e0;*/
+/*  border: 2px outset #fff;*/
+/*  text-decoration: none;*/
+/*  color: #000;*/
+/*}*/
 
-.navLink:hover {
-  background: #bfbfbf;
-}
+/*.navLink:hover {*/
+/*  background: #bfbfbf;*/
+/*}*/
 
 /* --- BUTTON STYLE LINKS --- */
 button, .project-card a {
@@ -91,29 +102,197 @@ button:active, .project-card a:active {
 }
 
 /* --- PROJECT CARDS --- */
+.project-card-container {
+    position: relative;
+    height: 200px; /* adjust as needed */
+    overflow: hidden;
+}
+
 .project-card {
-  background: #fff;
-  border: 2px outset #fff;
-  padding: 1rem;
-  text-align: center;
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transition: opacity 0.3s ease;
+}
+
+.project-card.active {
+    display: block;
+}
+
+.project-card {
+    display: none; /* for carousel */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 0.8rem;
+    background: rgba(220,220,220,210); /* translucent Win95 */
+    border: 2px outset #fff;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s;
 }
 
 .project-card:hover {
-  background: #f0f
-  
-  #skills ul.skills-list {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
+    background: rgba(220,220,220,212);
+    border: 2px inset #fff;
 }
 
-#skills ul.skills-list li {
-  background: linear-gradient(to right, #fae1ac, #f4bebe);
-  border: 2px solid #f4bebe;
-  border-radius: 6px;
-  padding: 0.4rem 0.8rem;
-  font-size: 0.85rem;
-  font-family: 'Press Start 2P', monospace;
+.project-card h4 {
+    margin: 0 0 0.5rem 0;
+}
+
+
+#skills {
+    font-family: 'Press Start 2P', monospace;
+    color: #000;
+    padding: 1rem;
+}
+
+#skills h3 {
+    margin-bottom: 1rem;
+}
+
+.skills-container h4 {
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.skills-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.skills-list li {
+    background: linear-gradient(to right, #fae1ac, #fae1ac);
+    border: 2px solid #f4bebe;
+    border-radius: 6px;
+    padding: 0.4rem 0.8rem;
+    font-size: 0.75rem;
+    white-space: nowrap;
+}
+
+#experience-scrollbox {
+    max-height: 300px;   /* adjust height as you like */
+    overflow-y: auto;    /* vertical scroll */
+    padding: 0.5rem;
+    background: rgba(220,220,220,0.4);
+    border: 2px outset #fff;
+    border-radius: 10px;
+}
+
+.job-card {
+    margin-bottom: 1rem;
+    padding: 0.75rem;
+    background: rgba(255,255,255,0.6);
+    border: 2px solid #999;
+    border-radius: 6px;
+}
+
+.job-card h4 {
+    margin: 0 0 0.5rem 0;
+    font-size: 0.8rem;
+}
+.job-card p {
+    font-size: 0.7rem;
+}
+.job-link {
+    display: inline-block;
+    margin-top: 0.5rem;
+    font-size: 0.7rem;
+    text-decoration: none;
+    color: #000;
+    background: rgba(220, 220, 220, 0.6);
+    border: 2px outset #fff;
+    padding: 0.3rem 0.6rem;
+    border-radius: 6px;
+    transition: background 0.2s, border 0.2s;
+}
+
+.job-link:hover {
+    background: rgba(220, 220, 220, 0.8);
+}
+
+.job-link:active {
+    border: 2px inset #fff;
+    background: rgba(191, 191, 191, 0.8);
+}
+
+
+#findMe {
+    margin: 10px;
+    display: flex;
+    flex-direction: column; /* stack children vertically */
+    gap: 0.5rem;            /* space between h4 and icons row */
+}
+
+
+
+#dateWidget {
+    background-color: #d3e7a3;
+    margin: auto;
+    text-align: center;
+    border-radius: 10px;
+    line-height: 1.5;
+    padding: 25px;
+    color: white;
+    border-width: 5px;
+    font-size: 15px;
+    opacity: 80%;
+}
+
+.icons-row {
+    display: flex;
+    flex-wrap: wrap;         /* allows icons to wrap to next line if needed */
+    gap: 0.5rem;             /* space between icons */
+}
+
+.icons-row .icons img {
+    width: 40px;
+    height: 40px;
+}
+
+
+#findMe img {
+    height: 25px;
+    width: 25px;
+}
+
+/* Mobile-first default (stacked) */
+.layout {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    grid-template-rows: auto auto auto auto auto;
+    grid-template-areas:
+        "header header"
+        "nav aside2"
+        "main main"
+        "aside1 aside1"
+        "footer footer";
+    gap: 0.5rem 0.25rem;
+    border: 2px solid black;
+    font-size: 15px;
+}
+
+/* Desktop layout */
+@media (min-width: 800px) {
+    .layout {
+        display: grid;
+        grid-template-columns: 200px auto 200px;
+        grid-template-rows: auto auto auto auto;
+        grid-template-areas:
+            "header header header"
+            "nav main aside2"
+            "aside1 main aside2"
+            "footer footer footer";
+        gap: 0.5rem 0.25rem;
+        border: 2px solid black;
+        font-size: 15px;
+    }
 }

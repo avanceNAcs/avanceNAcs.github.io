@@ -1,0 +1,51 @@
+[
+  {
+    "company": "Scott Free Unstoppable",
+    "role": "Freelance Web Developer",
+    "years": "June 2025 – Present",
+    "description": [
+      "Web Development: Designed and developed the official band website using Wix, creating customized layouts for both desktop and mobile viewing.",
+      "Custom Coding: Extended platform functionality by coding a custom scrollbar with JavaScript, HTML, and CSS, a feature not natively supported in Wix.",
+      "User Experience: Structured navigation and organized merchandise and content pages to improve user experience.",
+      "Branding & Design: Applied consistent branding, visual design, and multimedia to establish a professional online presence."
+    ],
+    "link": "http://scottfreeunstoppable.com"
+  },
+  {
+    "company": "Superior Glove",
+    "role": "SQL & ERP Developer (Full-time)",
+    "years": "January 2023 – August 2025",
+    "description": [
+      "Data Management & Reporting: Developed and maintained ERP templates and reports using NetSuite, SQL, and Power BI to provide real-time insights into warehouse and operational data.",
+      "ERP Migration & Customization: Supported the migration from Exenta to NetSuite by updating forms, scripts, and templates; optimized workflows to improve data accuracy and usability.",
+      "Analytics Support: Assisted in Google Analytics data interpretation and dashboard creation to support marketing and sales teams.",
+      "EDI Data Maintenance: Collaborated with customer service to identify and correct EDI data errors, ensuring smooth order processing and communication.",
+      "Process Documentation: Created and updated SOPs and user guides for ERP systems, reports, and warehouse workflows.",
+      "Project Management: Used Asana to track tasks, timelines, and communication across IT and warehouse teams.",
+      "Technical Support: Provided daily assistance with ERP, handhelds, WMS, printing, and data-related issues, reducing operational downtime."
+    ]
+  },
+  {
+    "company": "Superior Glove",
+    "role": "Software Developer & ERP Analyst (Co-op and Part-time)",
+    "years": "January 2022 – December 2022",
+    "description": [
+      "Full-Stack Development: Designed and co-developed a responsive website listing company merchandise using React.js and related technologies to ease vendor purchases.",
+      "ERP Development: Maintained and customized forms, processes, and databases using Exenta ERP and MySQL.",
+      "Database Management: Assisted in creating and optimizing SQL queries and scripts for data extraction and reporting.",
+      "Documentation: Documented ERP workflows and technical procedures to facilitate knowledge sharing and user training.",
+      "Technical Support: Provided ERP and technical support to internal users."
+    ]
+  },
+  {
+    "company": "Sheridan College",
+    "role": "Innovation Accelerator (Co-op, Project with Links2Care)",
+    "years": "June 2021 – August 2021",
+    "description": [
+      "Leadership: kept herself and her group members accountable (Project Leader: Hamna Noor).",
+      "Digital Literacy: leveraged Canva, Miro, and MS Teams to solve Links2Care’s challenge and achieve weekly goals.",
+      "Initiative & Entrepreneurial Mindset: demonstrated curiosity and a proactive desire to implement ideas and further goals.",
+      "Agility and Adaptability: showed flexibility, openness, and willingness to respond according to the situation."
+    ]
+  }
+]
