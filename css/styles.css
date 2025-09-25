@@ -28,7 +28,7 @@ footer {
     border-radius: 11px;
 }
 
-header, nav,aside, main, footer {
+header, nav, main {
     margin: 2px;
     background: #c7a4c9;
     opacity: 50%;
@@ -40,24 +40,53 @@ header, nav,aside, main, footer {
 
 nav {
     background: #dcdcdc;
+    /*border: 2px outset #fff;*/
+    padding: 0.5rem;
+    height: fit-content;
 }
+
+nav h4 {
+    font-size: 0.7rem;
+    margin-bottom: 0.5rem;
+}
+
 .navLink {
     display: flex;
     align-items: center;
-    gap: 8px;
-
-    padding: 8px 12px;
-    margin: 6px 0;
-    background-color: #bdacb4; /* default */
-    color: #000;
+    gap: 0.3rem;
+    padding: 0.3rem;
+    margin: 0.2rem 0;
+    background: #e0e0e0;
+    border: 2px outset #fff;
     text-decoration: none;
-    border: 1px solid #000;
-    border-radius: 0; /* square edges for pixel style */
-    font-family: 'Press Start 2P', monospace; /* Optional: pixel font */
+    color: #000;
     font-size: 10px;
-    image-rendering: pixelated; /* for pixel icons */
-    transition: none; /* no smooth effects */
 }
+
+.navLink:hover {
+    background: #bfbfbf;
+}
+
+/*nav {*/
+/*    background: #dcdcdc;*/
+/*}*/
+/*.navLink {*/
+/*    display: flex;*/
+/*    align-items: center;*/
+/*    gap: 8px;*/
+
+/*    padding: 8px 12px;*/
+/*    margin: 6px 0;*/
+/*    background-color: #bdacb4; !* default *!*/
+/*    color: #000;*/
+/*    text-decoration: none;*/
+/*    border: 1px solid #000;*/
+/*    border-radius: 0; !* square edges for pixel style *!*/
+/*    font-family: 'Press Start 2P', monospace; !* Optional: pixel font *!*/
+/*    font-size: 10px;*/
+/*    image-rendering: pixelated; !* for pixel icons *!*/
+/*    transition: none; !* no smooth effects *!*/
+/*}*/
 
 .navLink img {
     width: 30px;
@@ -65,17 +94,17 @@ nav {
     opacity: 100%;
 }
 
-.navLink:hover,
-.navLink:focus {
-    background-color: #f4bebe;
-    outline: 1px solid #000;
-    outline-offset: -2px;
-}
+/*.navLink:hover,*/
+/*.navLink:focus {*/
+/*    background-color: #f4bebe;*/
+/*    outline: 1px solid #000;*/
+/*    outline-offset: -2px;*/
+/*}*/
 
-.navLink:active {
-    background-color: #f4bebe;
-    transform: translateY(1px); /* subtle press effect */
-}
+/*.navLink:active {*/
+/*    background-color: #f4bebe;*/
+/*    transform: translateY(1px); !* subtle press effect *!*/
+/*}*/
 
 main {
     grid-area: main;

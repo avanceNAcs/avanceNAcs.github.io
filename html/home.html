@@ -18,21 +18,50 @@
     </header>
 
     <!-- NAVIGATION -->
-    <nav style="grid-area: nav;">
-      <h4>navigation</h4>
-      <a class="navLink click" href="home.html"><img src="../assets/images/icons/home_icon.png" alt="home"/>home</a>
-      <a class="navLink click" href="cosplay.html"><img src="../assets/images/icons/cosplay_icon.png" alt="cosplay"/>cosplay</a>
-      <a class="navLink click" href="arcade.html"><img src="../assets/images/icons/gameOn_icon.png" alt="gameOn"/>gameOn</a>
-      <a class="navLink click" href="sceneIt.html"><img src="../assets/images/icons/sceneIt_icon.png" alt="sceneIt"/>sceneIt</a>
-      <a class="navLink click" href="tuneIn.html"><img src="../assets/images/icons/tuneIn_icon.jpg" alt="tuneIn"/>tuneIn</a>
-    </nav>
+<!--    <nav style="grid-area: nav;">-->
+<!--      <h4>navigation</h4>-->
+<!--      <a class="navLink click" href="home.html"><img src="../assets/images/icons/home_icon.png" alt="home"/>home</a>-->
+<!--      <a class="navLink click" href="cosplay.html"><img src="../assets/images/icons/cosplay_icon.png" alt="cosplay"/>cosplay</a>-->
+<!--      <a class="navLink click" href="arcade.html"><img src="../assets/images/icons/gameOn_icon.png" alt="gameOn"/>gameOn</a>-->
+<!--      <a class="navLink click" href="sceneIt.html"><img src="../assets/images/icons/sceneIt_icon.png" alt="sceneIt"/>sceneIt</a>-->
+<!--      <a class="navLink click" href="tuneIn.html"><img src="../assets/images/icons/tuneIn_icon.jpg" alt="tuneIn"/>tuneIn</a>-->
+<!--    </nav>-->
+      <nav id="navbar"></nav>
 
     <!-- OPTIONAL DECORATIVE ASIDE -->
-    <aside style="grid-area: aside1;">
-      <!-- could hold an image, quote, or fun widget -->
-    </aside>
+      <aside id="projects" style="grid-area: aside1;">
+          <h3>Featured Projects</h3>
+          <div class="project-card-container">
+              <a class="project-card click" data-href="cosplay.html">
+                  <h4>Cosplay</h4>
+                  <p>WIP: My creative builds and tutorials.</p>
+              </a>
 
-    <!-- MAIN CONTENT -->
+              <a class="project-card click" data-href="arcade.html">
+                  <h4>GameOn</h4>
+                  <p>WIP: Mini-games and interactive experiments.</p>
+              </a>
+
+              <a class="project-card click" data-href="sceneIt.html">
+                  <h4>SceneIt</h4>
+                  <p>WIP: My watchlist, thoughts, and information.</p>
+              </a>
+
+              <a class="project-card click" data-href="tuneIn.html">
+                  <h4>TuneIn</h4>
+                  <p>WIP: Music tools and lyric generator.</p>
+              </a>
+          </div>
+
+          <div class="project-controls">
+              <button id="prevProject" class="click" data-href="prevProject.html">← Prev</button>
+              <button id="nextProject" class="click" data-href="nextProject.html">Next →</button>
+          </div>
+      </aside>
+
+
+
+      <!-- MAIN CONTENT -->
     <main style="grid-area: main;">
       <article>
         <h2>~ welcome ~</h2>
@@ -75,39 +104,13 @@
                 </ul>
             </div>
         </section>
+        <section id="work-experience">
+            <h3>Work Experience</h3>
 
-
-      <!-- Featured Projects -->
-      <section id="projects">
-        <h3>Featured Projects</h3>
-        <div class="project-grid">
-          <div class="project-card">
-            <h4>Scott Free Unstoppable</h4>
-            <p>A multimedia site for the band <em>Scott Free Unstoppable</em>, featuring shows, photos, music, a journal, and merch. Bold visuals and intuitive navigation give fans a full experience.</p>
-            <a class="click" href="http://scottfreeunstoppable.com" target="_blank">visit site →</a>
-          </div>
-          <div class="project-card">
-            <h4>Cosplay</h4>
-            <p>WIP: My creative builds and tutorials.</p>
-            <a class="click" href="cosplay.html">yay! →</a>
-          </div>
-          <div class="project-card">
-            <h4>GameOn</h4>
-            <p>WIP: Mini-games and interactive experiments.</p>
-            <a class="click" href="arcade.html">fun! →</a>
-          </div>
-          <div class="project-card">
-            <h4>SceneIt</h4>
-            <p>WIP: My watchlist, thoughts, and information.</p>
-            <a class="click" href="sceneIt.html">scene it? →</a>
-          </div>
-          <div class="project-card">
-            <h4>TuneIn</h4>
-            <p>WIP: Music tools and lyric generator.</p>
-            <a class="click" href="tuneIn.html">tune in →</a>
-          </div>
-        </div>
-      </section>
+            <div id="experience-scrollbox">
+                <div id="experience-container"></div>
+            </div>
+        </section>
     </main>
 
     <!-- SIDE WIDGETS -->
@@ -141,5 +144,8 @@
   </div>
   <script src="../js/dateWidget.js"></script>
   <script src="../js/audio.js"></script>
+  <script src="../js/navbar.js"></script>
+  <script src="../js/projectsCarousel.js"></script>
+  <script src="../js/workExperience.js"></script>
 </body>
 </html>
