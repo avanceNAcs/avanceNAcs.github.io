@@ -245,5 +245,41 @@
     "cosplayImage": "/assets/images/cosplay/KatkiLiisbet_Cosplay.jpg",
     "cosplayLocation": "Frightmare at the Falls",
     "cosplayDate": "2024"
-  }
+  },
+  {
+  "name": "Ainsley Lullia",
+  "franchise": "Original Character",
+  "image": "/assets/images/characters/AinsleyLullia.jpg",
+  "description": "Ainsley Lullia, known as Luli, is a pink nature fairy from medieval Scotland. She flits gracefully through meadows with her white wings and elf ears, wearing a white dress with a moss top and flowering vines. She loves napping among flowers, practicing archery with calm precision, and sprinkling gold pixie dust with her star vine wand.",
+  "traits": [
+    "Dreamy and calm",
+    "Loves to sleep",
+    "Gentle and caring",
+    "Shy but observant",
+    "Patient and precise in archery",
+    "Connected deeply to nature"
+  ],
+  "cosplayNotes": "Pink hair and eyelashes with sparkly makeup, and elf ears. Friend thrifted a white dress and we added moss, vines and flowers. There are vines around her white wings, gold pixie dust, and star vine wand.",
+  "card": false,
+  "cosplayImage": "/assets/images/cosplay/AinsleyLullia_Cosplay.jpg",
+  "cosplayLocation": "Oxford Renaissance Fair",
+  "cosplayDate": "2024"
+},
+  {
+  "name": "Ramona Flowers",
+  "franchise": "Scott Pilgrim vs. the World",
+  "image": "/assets/images/characters/RamonaFlowers.jpg",
+  "description": "Ramona Victoria Flowers is an American expatriate living in Toronto, Canada. She works as a 'Ninja delivery girl' for Amazon.ca, possessing the ability to travel through Subspace, allowing her to teleport. Known for her guarded personality, she reveals very little about her past in New York before she moved to Toronto. Ramona is also a tea enthusiast, as discovered when Scott is bombarded with a list of teas in one of Ramona's cupboards of her home. To date her, Scott must defeat her seven evil exes, each representing a challenge to their relationship.",
+  "traits": [
+    "Independent and mysterious",
+    "Cool and stylish",
+    "Edgy yet approachable",
+    "Has seven evil exes"
+  ],
+  "cosplayNotes": "Cosplayed with blue hair, steampunk goggles, and a circle bag with blue star.",
+  "card": true,
+  "cosplayImage": "/assets/images/cosplay/RamonaFlowers_Cosplay.jpg",
+  "cosplayLocation": "Scott Pilgrim vs the World Tribute Performance at Lee’s Palace",
+  "cosplayDate": "2024"
+}
 ]
