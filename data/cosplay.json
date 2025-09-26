@@ -13,8 +13,8 @@
     "cosplayNotes": "Cosplayed with icy makeup, silver wig, and frosty blue outfit.",
     "card": true,
     "cosplayImage": "/assets/images/cosplay/KillerFrost_Cosplay.jpg",
-    "cosplayLocation": "Fan Expo 2023",
-    "cosplayDate": "2023-08-23"
+    "cosplayLocation": "Niagara Falls ComicCon 2024",
+    "cosplayDate": ""
   },
   {
     "name": "Gumi Megpoid (Matryoshka ver.)",
@@ -28,8 +28,8 @@
     "cosplayNotes": "Wore the green hoodie and Matryoshka-style makeup with painted gas mask details.",
     "card": true,
     "cosplayImage": "/assets/images/cosplay/GumiMegpoid_Cosplay.jpg",
-    "cosplayLocation": "Anime North 2022",
-    "cosplayDate": "2022-07-16"
+    "cosplayLocation": "Family Day 2023",
+    "cosplayDate": ""
   },
   {
     "name": "Hotaru Shidare",
@@ -44,8 +44,8 @@
     "cosplayNotes": "Cosplayed with her signature gothic lolita dress and candy props.",
     "card": true,
     "cosplayImage": "/assets/images/cosplay/HotaruShidare_Cosplay.jpg",
-    "cosplayLocation": "Fan Expo 2022",
-    "cosplayDate": "2022-08-24"
+    "cosplayLocation": "Fan Expo 2025",
+    "cosplayDate": "2025-08-22"
   },
   {
     "name": "Viper",
@@ -61,8 +61,8 @@
     "cosplayNotes": "Made her green mask, black bodysuit, and neon toxic details.",
     "card": true,
     "cosplayImage": "/assets/images/cosplay/Viper_Cosplay.jpg",
-    "cosplayLocation": "Local GameCon 2023",
-    "cosplayDate": "2023-05-10"
+    "cosplayLocation": "Fan Expo 2023",
+    "cosplayDate": "2023-08-22"
   },
   {
     "name": "Yuno Gasai",
@@ -78,8 +78,8 @@
     "cosplayNotes": "Cosplayed with her school uniform, pink wig, and fake blood-stained props.",
     "card": true,
     "cosplayImage": "/assets/images/cosplay/YunoGasai_Cosplay.jpg",
-    "cosplayLocation": "Anime North 2021",
-    "cosplayDate": "2021-07-17"
+    "cosplayLocation": "Prop Expo 2025",
+    "cosplayDate": ""
   },
   {
     "name": "Hachi (Nana Komatsu)",
@@ -94,8 +94,8 @@
     "cosplayNotes": "Wore Hachi’s feminine, romantic outfits with soft styling.",
     "card": true,
     "cosplayImage": "/assets/images/cosplay/Hachi_Cosplay.jpg",
-    "cosplayLocation": "Local Comic Expo 2020",
-    "cosplayDate": "2020-09-12"
+    "cosplayLocation": "Anime North",
+    "cosplayDate": "2024"
   },
   {
     "name": "Rosalina",
@@ -111,8 +111,8 @@
     "cosplayNotes": "Cosplayed with her star wand, flowing light-blue gown, and crown.",
     "card": true,
     "cosplayImage": "/assets/images/cosplay/Rosalina_Cosplay.jpg",
-    "cosplayLocation": "Fan Expo 2021",
-    "cosplayDate": "2021-08-22"
+    "cosplayLocation": "Halloween",
+    "cosplayDate": "2023"
   },
   {
     "name": "Lilo Pelekai",
@@ -128,8 +128,8 @@
     "cosplayNotes": "Cosplayed with her red hibiscus dress and plush Stitch.",
     "card": true,
     "cosplayImage": "/assets/images/cosplay/Lilo_Cosplay.jpg",
-    "cosplayLocation": "Disney Cosplay Meetup 2022",
-    "cosplayDate": "2022-06-18"
+    "cosplayLocation": "Square One Lilo & Stitch Movie Display",
+    "cosplayDate": "2025"
   },
   {
     "name": "Moana",
@@ -144,8 +144,8 @@
     "cosplayNotes": "Cosplayed with her Polynesian-inspired outfit and handmade oar prop.",
     "card": true,
     "cosplayImage": "/assets/images/cosplay/Moana_Cosplay.jpg",
-    "cosplayLocation": "Anime Expo 2023",
-    "cosplayDate": "2023-07-05"
+    "cosplayLocation": "Parade",
+    "cosplayDate": "2025"
   },
   {
     "name": "Elsa",
@@ -161,8 +161,8 @@
     "cosplayNotes": "Cosplayed with her Frozen II white-and-blue gown and glitter makeup.",
     "card": true,
     "cosplayImage": "/assets/images/cosplay/Elsa_Cosplay.jpg",
-    "cosplayLocation": "Disney Cosplay Meetup 2023",
-    "cosplayDate": "2023-03-12"
+    "cosplayLocation": "Halloween",
+    "cosplayDate": "2022"
   },
   {
     "name": "Daphne Blake",
@@ -177,8 +177,8 @@
     "cosplayNotes": "Cosplayed with her purple dress, green scarf, and orange wig.",
     "card": true,
     "cosplayImage": "/assets/images/cosplay/Daphne_Cosplay.jpg",
-    "cosplayLocation": "Fan Expo 2022",
-    "cosplayDate": "2022-08-25"
+    "cosplayLocation": "Halloween",
+    "cosplayDate": "2021"
   },
   {
     "name": "Mikasa Ackerman",
@@ -243,7 +243,7 @@
     "cosplayNotes": "Cosplayed with short wavy blonde hair, a dress with a white collar top and brown bottom, and broken doll makeup details.",
     "card": false,
     "cosplayImage": "/assets/images/cosplay/KatkiLiisbet_Cosplay.jpg",
-    "cosplayLocation": "Halloween Cosplay Meetup 2022",
-    "cosplayDate": "2022-10-31"
+    "cosplayLocation": "Frightmare at the Falls",
+    "cosplayDate": "2024"
   }
 ]
