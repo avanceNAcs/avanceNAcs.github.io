@@ -1,7 +1,8 @@
 /* ---------- CAROUSEL WRAPPER ---------- */
 #cosplay-carousel {
     display: flex;
-    overflow-x: hidden;
+    overflow-x: auto; /* change this */
+    scroll-behavior: smooth;
     gap: 20px;
     justify-content: flex-start;
     padding: 20px 0;
