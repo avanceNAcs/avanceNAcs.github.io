@@ -1,0 +1,249 @@
+[
+  {
+    "name": "Killer Frost",
+    "franchise": "The Flash (CW, Season 2)",
+    "image": "/assets/images/characters/KillerFrost.jpg",
+    "description": "In The Flash Season 2, Killer Frost is Caitlin Snow’s dangerous doppelgänger from Earth-2. Unlike the compassionate Caitlin of Earth-1, she’s a cold-hearted metahuman villain with powerful ice abilities, working under Zoom with her lover Deathstorm. Her arc explores her conflict between loyalty to Zoom and her personal pain, showing that even in her darkest form, there are glimpses of Caitlin’s humanity.",
+    "traits": [
+      "Cryokinesis (control of ice and cold)",
+      "Ice projectiles and blasts",
+      "Freezing touch",
+      "Enhanced durability"
+    ],
+    "cosplayNotes": "Cosplayed with icy makeup, silver wig, and frosty blue outfit.",
+    "card": true,
+    "cosplayImage": "/assets/images/cosplay/KillerFrost_Cosplay.jpg",
+    "cosplayLocation": "Fan Expo 2023",
+    "cosplayDate": "2023-08-23"
+  },
+  {
+    "name": "Gumi Megpoid (Matryoshka ver.)",
+    "franchise": "Vocaloid",
+    "image": "/assets/images/characters/GumiMatryoshka.jpg",
+    "description": "Gumi Megpoid is a Vocaloid character featured in the popular song 'Matryoshka' by Hachi (Kenshi Yonezu). In this version, Gumi wears a green hoodie with a gas mask theme, alongside Miku, in a surreal and chaotic aesthetic.",
+    "traits": [
+      "Virtual idol performance",
+      "Singing and music-based powers (Vocaloid context)"
+    ],
+    "cosplayNotes": "Wore the green hoodie and Matryoshka-style makeup with painted gas mask details.",
+    "card": true,
+    "cosplayImage": "/assets/images/cosplay/GumiMegpoid_Cosplay.jpg",
+    "cosplayLocation": "Anime North 2022",
+    "cosplayDate": "2022-07-16"
+  },
+  {
+    "name": "Hotaru Shidare",
+    "franchise": "Dagashi Kashi",
+    "image": "/assets/images/characters/HotaruShidare.jpg",
+    "description": "Hotaru Shidare is an eccentric and flamboyant girl obsessed with Japanese candy (dagashi). She recruits Kokonotsu Shikada in hopes of convincing him to take over his family’s dagashi shop, showing off her dramatic personality.",
+    "traits": [
+      "Extensive knowledge of Japanese sweets",
+      "Comedic eccentricity",
+      "Dramatic charisma"
+    ],
+    "cosplayNotes": "Cosplayed with her signature gothic lolita dress and candy props.",
+    "card": true,
+    "cosplayImage": "/assets/images/cosplay/HotaruShidare_Cosplay.jpg",
+    "cosplayLocation": "Fan Expo 2022",
+    "cosplayDate": "2022-08-24"
+  },
+  {
+    "name": "Viper",
+    "franchise": "Valorant",
+    "image": "/assets/images/characters/Viper.jpg",
+    "description": "Viper (Sabine Callas) is a toxic controller agent in Valorant. She uses poisonous gas and chemical devices to control the battlefield and manipulate enemies’ positioning, while keeping her true motives guarded.",
+    "traits": [
+      "Poisonous gas clouds and walls",
+      "Venomous snakebite grenades",
+      "Toxic screen for battlefield control",
+      "Resilience and strategic intelligence"
+    ],
+    "cosplayNotes": "Made her green mask, black bodysuit, and neon toxic details.",
+    "card": true,
+    "cosplayImage": "/assets/images/cosplay/Viper_Cosplay.jpg",
+    "cosplayLocation": "Local GameCon 2023",
+    "cosplayDate": "2023-05-10"
+  },
+  {
+    "name": "Yuno Gasai",
+    "franchise": "Mirai Nikki (Future Diary)",
+    "image": "/assets/images/characters/YunoGasai.jpg",
+    "description": "Yuno Gasai is the obsessive, cunning, and dangerous main heroine of Mirai Nikki. She possesses the Yukiteru Diary, predicting everything about her love interest, Yuki. Her devotion borders on madness, making her the archetypal yandere.",
+    "traits": [
+      "Future diary prediction",
+      "Combat skills",
+      "Extreme cunning and manipulation",
+      "Obsessive determination"
+    ],
+    "cosplayNotes": "Cosplayed with her school uniform, pink wig, and fake blood-stained props.",
+    "card": true,
+    "cosplayImage": "/assets/images/cosplay/YunoGasai_Cosplay.jpg",
+    "cosplayLocation": "Anime North 2021",
+    "cosplayDate": "2021-07-17"
+  },
+  {
+    "name": "Hachi (Nana Komatsu)",
+    "franchise": "Nana",
+    "image": "/assets/images/characters/Hachi.jpg",
+    "description": "Nana Komatsu, nicknamed Hachi, is a cheerful and romantic girl in Ai Yazawa’s manga/anime Nana. She dreams of love and companionship, often getting swept into relationships and relying on her friends for strength.",
+    "traits": [
+      "Emotional warmth and resilience",
+      "Strong friendships",
+      "Romantic intuition"
+    ],
+    "cosplayNotes": "Wore Hachi’s feminine, romantic outfits with soft styling.",
+    "card": true,
+    "cosplayImage": "/assets/images/cosplay/Hachi_Cosplay.jpg",
+    "cosplayLocation": "Local Comic Expo 2020",
+    "cosplayDate": "2020-09-12"
+  },
+  {
+    "name": "Rosalina",
+    "franchise": "Super Mario Bros.",
+    "image": "/assets/images/characters/Rosalina.jpg",
+    "description": "Rosalina is the guardian of the cosmos and mother figure to the Lumas. She first appeared in Super Mario Galaxy, where she guides Mario on his quest. She is serene, mysterious, and wise.",
+    "traits": [
+      "Cosmic magic",
+      "Levitation",
+      "Guiding and protecting Lumas",
+      "Immortality-like longevity"
+    ],
+    "cosplayNotes": "Cosplayed with her star wand, flowing light-blue gown, and crown.",
+    "card": true,
+    "cosplayImage": "/assets/images/cosplay/Rosalina_Cosplay.jpg",
+    "cosplayLocation": "Fan Expo 2021",
+    "cosplayDate": "2021-08-22"
+  },
+  {
+    "name": "Lilo Pelekai",
+    "franchise": "Lilo & Stitch",
+    "image": "/assets/images/characters/Lilo.jpg",
+    "description": "Lilo is a quirky Hawaiian girl from Disney’s Lilo & Stitch. She adopts Stitch, an alien experiment, and teaches him about ohana (family). Despite being misunderstood, she is fiercely loving and imaginative.",
+    "traits": [
+      "Strong imagination",
+      "Emotional resilience",
+      "Dancing hula",
+      "Unshakable sense of ohana"
+    ],
+    "cosplayNotes": "Cosplayed with her red hibiscus dress and plush Stitch.",
+    "card": true,
+    "cosplayImage": "/assets/images/cosplay/Lilo_Cosplay.jpg",
+    "cosplayLocation": "Disney Cosplay Meetup 2022",
+    "cosplayDate": "2022-06-18"
+  },
+  {
+    "name": "Moana",
+    "franchise": "Moana (Disney)",
+    "image": "/assets/images/characters/Moana.jpg",
+    "description": "Moana is the adventurous daughter of a Polynesian chief, chosen by the ocean to restore the heart of Te Fiti. Brave and determined, she sails beyond the reef to save her people and discover her destiny.",
+    "traits": [
+      "Wayfinding and navigation",
+      "Connection to the ocean",
+      "Bravery and leadership"
+    ],
+    "cosplayNotes": "Cosplayed with her Polynesian-inspired outfit and handmade oar prop.",
+    "card": true,
+    "cosplayImage": "/assets/images/cosplay/Moana_Cosplay.jpg",
+    "cosplayLocation": "Anime Expo 2023",
+    "cosplayDate": "2023-07-05"
+  },
+  {
+    "name": "Elsa",
+    "franchise": "Frozen (Disney)",
+    "image": "/assets/images/characters/Elsa.jpg",
+    "description": "In Frozen II, Elsa continues her journey of self-discovery, following the voice that calls her to the Enchanted Forest. She learns about her origins and embraces her role as the Fifth Spirit, bridging humans and nature.",
+    "traits": [
+      "Cryokinesis (ice and snow manipulation)",
+      "Spirit magic connection",
+      "Leadership as Queen of Arendelle",
+      "Immense resilience"
+    ],
+    "cosplayNotes": "Cosplayed with her Frozen II white-and-blue gown and glitter makeup.",
+    "card": true,
+    "cosplayImage": "/assets/images/cosplay/Elsa_Cosplay.jpg",
+    "cosplayLocation": "Disney Cosplay Meetup 2023",
+    "cosplayDate": "2023-03-12"
+  },
+  {
+    "name": "Daphne Blake",
+    "franchise": "Scooby-Doo",
+    "image": "/assets/images/characters/Daphne.jpg",
+    "description": "Daphne is the fashionable and resourceful member of Mystery Inc. Known as the ‘danger-prone’ girl, she often gets captured but has grown into a capable fighter and investigator in later series.",
+    "traits": [
+      "Fashion sense and style",
+      "Bravery",
+      "Martial arts and sleuthing (later adaptations)"
+    ],
+    "cosplayNotes": "Cosplayed with her purple dress, green scarf, and orange wig.",
+    "card": true,
+    "cosplayImage": "/assets/images/cosplay/Daphne_Cosplay.jpg",
+    "cosplayLocation": "Fan Expo 2022",
+    "cosplayDate": "2022-08-25"
+  },
+  {
+    "name": "Mikasa Ackerman",
+    "franchise": "Attack on Titan",
+    "image": "/assets/images/characters/Mikasa.jpg",
+    "description": "Mikasa Ackerman is one of the most skilled soldiers in the Survey Corps. Fiercely protective of Eren Yeager, she has unmatched combat skills and a quiet, stoic personality shaped by a tragic past.",
+    "traits": [
+      "Elite combat skills",
+      "Protective and loyal",
+      "Stoic and strategic",
+      "Exceptional agility and reflexes"
+    ],
+    "cosplayNotes": "Cosplayed with Survey Corps uniform, 3D maneuver gear, and short black wig.",
+    "card": true,
+    "cosplayImage": "/assets/images/cosplay/MikasaAckerman_Cosplay.JPG",
+    "cosplayLocation": "Halloween",
+    "cosplayDate": "2021"
+  },
+  {
+    "name": "Shock",
+    "franchise": "The Nightmare Before Christmas",
+    "image": "/assets/images/characters/Shock.jpg",
+    "description": "Shock is the mischievous kid witch from Oogie Boogie’s trio. She is clever, sneaky, and enjoys causing trouble with her companions, Lock and Barrel.",
+    "traits": [
+      "Mischievous and cunning",
+      "Spellcasting in a playful, chaotic way",
+      "Agility and stealth"
+    ],
+    "cosplayNotes": "Cosplayed as the kid witch with purple hat and cloak, green mask details.",
+    "card": true,
+    "cosplayImage": "/assets/images/cosplay/Shock_Cosplay.jpg",
+    "cosplayLocation": "Halloween",
+    "cosplayDate": "2024"
+  },
+  {
+    "name": "Aurelia de Selva",
+    "franchise": "Original Character",
+    "image": "/assets/images/characters/AureliaDeSelva.jpg",
+    "description": "Aurelia de Selva is a princess marked by a wolf scratch across her face. She carries herself with grace and regality, but her scar tells a story of survival and courage. Her long wavy blonde hair, white corset, and pink translucent skirt reflect her elegance, while her small circular crown hints at her royal heritage. She embodies strength, resilience, and the quiet power of the forest.",
+    "traits": [
+      "Graceful and regal",
+      "Survivor’s resilience",
+      "Courage and inner strength",
+      "Connection to the forest and wilds"
+    ],
+    "cosplayNotes": "Cosplayed with long wavy blonde hair, white long-sleeve corset, pink translucent long skirt, and a small circular crown.",
+    "card": false,
+    "cosplayImage": "/assets/images/cosplay/AureliaDeSelva_Cosplay.jpg",
+    "cosplayLocation": "Niagara Halloween Drag Show",
+    "cosplayDate": "2024"
+  },
+  {
+    "name": "Katki Liisbet",
+    "franchise": "Original Character",
+    "image": "/assets/images/characters/KatkiLiisbet.jpg",
+    "description": "Katki Liisbet was once a normal girl, but some mysterious fate transformed her into a cracked doll. Her short wavy blonde hair and porcelain-like face bear subtle fractures, giving her a fragile yet haunting presence. She embodies the eerie charm of a broken toy that somehow holds a story and soul.",
+    "traits": [
+      "Fragile and delicate appearance",
+      "Haunting, uncanny charm",
+      "Ethereal and mysterious aura"
+    ],
+    "cosplayNotes": "Cosplayed with short wavy blonde hair, a dress with a white collar top and brown bottom, and broken doll makeup details.",
+    "card": false,
+    "cosplayImage": "/assets/images/cosplay/KatkiLiisbet_Cosplay.jpg",
+    "cosplayLocation": "Halloween Cosplay Meetup 2022",
+    "cosplayDate": "2022-10-31"
+  }
+]
