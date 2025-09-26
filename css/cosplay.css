@@ -169,4 +169,7 @@
     .card, .oc-card {
         flex: 0 0 100%; /* 1 card at a time */
     }
+    .carousel-nav {
+display: none;
+}
 }
