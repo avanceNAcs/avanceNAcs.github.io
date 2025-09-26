@@ -1,79 +1,64 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cosplay</title>
-  <link rel="stylesheet" href="../css/styles. <link rel="stylesheet" href="../css/cosplay.css">
-  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-  <style>
-    /* Quick demo styles for the cards */
-    .carousel-container {
-      display: flex;
-      align-items: center;
-      position: relative;
-      overflow: hidden;
-      width: 100%;
-    }
-    .carousel {
-      display: flex;
-      overflow-x: hidden;
-      scroll-behavior: smooth;
-    }
-    .card {
-      flex: 0 0 auto;
-      width: 200px;
-      margin-right: 10px;
-      background: #fff;
-      border: 2px solid #000;
-      text-align: center;
-      font-family: 'Press Start 2P', monospace;
-    }
-    .card img {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
-    .carousel-nav {
-      background: #000;
-      color: #fff;
-      border: none;
-      font-size: 2rem;
-      padding: 0.5rem 1rem;
-      cursor: pointer;
-      z-index: 2;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cosplay</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/cosplay.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 </head>
 <body class="layout-2col">
 
-  <header>
-    <h1>yayitssofie's cosplay</h1>
-  </header>
+    <header>
+        <h1>yayitssofie's cosplay</h1>
+    </header>
 
-  <main>
-    <!-- Carousel with prev/next buttons -->
-    <div class="carousel-container">
-      <button id="prev-btn" class="carousel-nav">&lt;</button>
-      <div id="cosplay-carousel" class="carousel">
-        <div class="card">
-          <img src="https://via.placeholder.com/200x250/87CEFA/000000?text=Killer+Frost" alt="Killer Frost">
-          <p>Killer Frost</p>
-        </div>
-        <div class="card">
-          <img src="https://via.placeholder.com/200x250/FF69B4/000000?text=Asuka" alt="Asuka">
-          <p>Asuka</p>
-        </div>
-        <div class="card">
-          <img src="https://via.placeholder.com/200x250/98FB98/000000?text=Harley+Quinn" alt="Harley Quinn">
-          <p>Harley Quinn</p>
-        </div>
-      </div>
-      <button id="next-btn" class="carousel-nav">&gt;</button>
-    </div>
-  </main>
+    <nav id="navbar"></nav>
 
-  <footer>&copy; 2025 avanceNAcs</footer>
+    <main>
+        <article>
+            <h3>~welcome~</h3>
+            <p>hi! I am Sofia Avanceña. <br> I post my cosplay on Instagram @yayitssofie</p>
+        </article>
 
-  <script src="../js/cosplay.js" defer></script>
+        <!-- Carousel with prev/next buttons -->
+        <div class="carousel-container">
+            <button id="prev-btn" class="carousel-nav">&lt;</button>
+            <div id="cosplay-carousel" class="carousel"></div>
+            <button id="next-btn" class="carousel-nav">&gt;</button>
+        </div>
+
+        <!-- Character modal -->
+        <div id="char-modal" class="modal">
+            <div class="modal-content">
+                <span id="char-close">&times;</span>
+                <img id="char-modal-image" src="" alt="Character">
+                <h2 id="char-modal-name"></h2>
+                <p id="char-modal-franchise"></p>
+                <p id="char-modal-description"></p>
+            </div>
+        </div>
+
+        <!-- Cosplay modal -->
+        <div id="cosplay-modal" class="modal">
+            <div class="modal-content">
+                <span id="cosplay-close">&times;</span>
+                <img id="cosplay-modal-image" src="" alt="Cosplay">
+                <h2 id="cosplay-modal-name"></h2>
+                <p id="cosplay-modal-franchise"></p>
+
+                <p id="cosplay-modal-description"></p>
+                <p id="cosplay-modal-details"></p>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>&copy; 2025 avanceNAcs</footer>
+
+    <script src="../js/navbar.js"></script>
+    <script src="../js/audio.js"></script>
+    <script src="../js/cosplay.js" defer></script>
 </body>
 </html>
