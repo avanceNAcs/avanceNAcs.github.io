@@ -1,11 +1,171 @@
-.cosplay-card {
-    display: block;
-    width: 100%;
-    padding: 0.8rem;
-    background: rgba(255,255,255,0.9);
-    border: 2px outset #fff;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: all 0.2s;
+/* ---------- CAROUSEL WRAPPER ---------- */
+#cosplay-carousel {
+    display: flex;
+    overflow-x: hidden;
+    gap: 20px;
+    justify-content: flex-start;
+    padding: 20px 0;
+    max-width: 1200px;
+    margin: 0 auto;
 }
-.cosplay-card:hover { border: 2px inset #fff; background: rgba(255,255,255,0.95); }
+
+/* ---------- INDIVIDUAL CARD ---------- */
+.card {
+    flex: 0 0 calc((100% - 40px) / 3); /* 3 cards at a time */
+    max-width: 350px; /* prevent stretching too wide */
+    height: 500px;
+    border-radius: 15px;
+    overflow: hidden;
+    cursor: pointer;
+    transform-style: preserve-3d;
+    transition: transform 0.8s ease-in-out;
+    position: relative;
+    background-color: #222;
+}
+
+.card-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.8s ease-in-out;
+}
+
+.card:hover .card-inner {
+    transform: rotateY(180deg);
+}
+
+/* ---------- FRONT/BACK PAGES ---------- */
+.front-page, .back-page {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 15px;
+}
+
+/* Front */
+.front-page {
+    background-size: cover;
+    background-position: center;
+}
+
+/* Card info overlay */
+.card-info {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+    text-align: center;
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.5);
+}
+
+/* Back */
+.back-page {
+    background-color: #1e272e;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotateY(180deg);
+}
+
+.card-content {
+    text-align: center;
+    padding: 15px;
+    max-width: 280px;
+}
+
+.card-desc {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    margin-bottom: 10px;
+}
+
+.card-button {
+    background-color: #0fbcf9;
+    color: #fff;
+    padding: 10px 20px;
+    margin: 5px 0;
+    font-size: 0.9rem;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.card-button:hover {
+    background-color: transparent;
+    color: #0fbcf9;
+    border: 1px solid #0fbcf9;
+}
+
+/* ---------- OC CARD BUTTON ---------- */
+.oc-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 0 0 calc((100% - 40px) / 3);
+    max-width: 350px;
+    height: 500px;
+    background-color: #444;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+/* ---------- MODAL STYLING ---------- */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.8);
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 5% auto;
+    padding: 20px;
+    max-width: 600px;
+    border-radius: 15px;
+    position: relative;
+    text-align: center;
+}
+
+.modal-content img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.modal-content h2, .modal-content p {
+    margin: 10px 0;
+}
+
+#modal-close, #char-close, #cosplay-close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 1024px) {
+    .card, .oc-card {
+        flex: 0 0 calc((100% - 20px) / 2); /* 2 cards at a time */
+    }
+}
+
+@media (max-width: 640px) {
+    .card, .oc-card {
+        flex: 0 0 100%; /* 1 card at a time */
+    }
+}

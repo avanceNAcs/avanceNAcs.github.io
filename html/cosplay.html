@@ -10,29 +10,55 @@
 </head>
 <body class="layout-2col">
 
-    <!-- HEADER -->
     <header>
         <h1>yayitssofie's cosplay</h1>
     </header>
 
-    <!-- NAVIGATION -->
     <nav id="navbar"></nav>
 
-    <!-- MAIN CONTENT -->
     <main>
         <article>
             <h3>~welcome~</h3>
-            <p>hi! I am Sofia Avanceña. <br>I've been cosplaying since I was 1 year old.</p>
+            <p>hi! I am Sofia Avanceña. <br> I post my cosplay on Instagram @yayitssofie</p>
         </article>
+
+        <!-- Carousel with prev/next buttons -->
+        <div class="carousel-container">
+            <button id="prev-btn" class="carousel-nav">&lt;</button>
+            <div id="cosplay-carousel" class="carousel"></div>
+            <button id="next-btn" class="carousel-nav">&gt;</button>
+        </div>
+
+        <!-- Character modal -->
+        <div id="char-modal" class="modal">
+            <div class="modal-content">
+                <span id="char-close">&times;</span>
+                <img id="char-modal-image" src="" alt="Character">
+                <h2 id="char-modal-name"></h2>
+                <p id="char-modal-franchise"></p>
+                <p id="char-modal-description"></p>
+            </div>
+        </div>
+
+        <!-- Cosplay modal -->
+        <div id="cosplay-modal" class="modal">
+            <div class="modal-content">
+                <span id="cosplay-close">&times;</span>
+                <img id="cosplay-modal-image" src="" alt="Cosplay">
+                <h2 id="cosplay-modal-name"></h2>
+                <p id="cosplay-modal-franchise"></p>
+
+                <p id="cosplay-modal-description"></p>
+                <p id="cosplay-modal-details"></p>
+            </div>
+        </div>
+
     </main>
 
-    <!-- FOOTER -->
-    <footer>
-        &copy; 2025 avanceNAcs
-    </footer>
+    <footer>&copy; 2025 avanceNAcs</footer>
 
-    <!-- SCRIPTS -->
     <script src="../js/navbar.js"></script>
     <script src="../js/audio.js"></script>
+    <script src="../js/cosplay.js" defer></script>
 </body>
 </html>
