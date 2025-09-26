@@ -94,6 +94,44 @@ document.addEventListener("DOMContentLoaded", () => {
         })
         .catch(err => console.error("Failed to load cosplay.json:", err));
 
+    function hasTouchSupport() {
+  return ('ontouchstart' in document.documentElement);
+}
+
+if (hasTouchSupport()) {
+  // Code for touch-enabled devices (likely mobile)
+    const swipeContainer = document.querySelector('.swipe-container');
+let startX;
+
+swipeContainer.addEventListener('touchstart', (e) => {
+  startX = e.touches[0].clientX;
+});
+
+swipeContainer.addEventListener('touchend', (e) => {
+  const endX = e.changedTouches[0].clientX;
+  const diffX = startX - endX;
+
+  if (Math.abs(diffX) > 50) { // Define a threshold for swipe detection
+    if (diffX > 0) {
+      console.log('Swiped left');
+      // Add logic for left swipe
+        const cardWidth = getCardWidth();
+        scrollAmount += cardWidth;
+        if(scrollAmount > carousel.scrollWidth - carousel.clientWidth) scrollAmount = carousel.scrollWidth - carousel.clientWidth;
+        carousel.scrollTo({left: scrollAmount, behavior: "smooth"});
+    } else {
+      console.log('Swiped right');
+      // Add logic for right swipe
+        const cardWidth = getCardWidth();
+        scrollAmount -= cardWidth;
+        if(scrollAmount < 0) scrollAmount = 0;
+        carousel.scrollTo({left: scrollAmount, behavior: "smooth"});
+    }
+  }
+});
+
+} else {
+  // Code for non-touch devices
     // Carousel scrolling
     function getCardWidth(){
         const card = carousel.querySelector(".card");
@@ -115,6 +153,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if(scrollAmount < 0) scrollAmount = 0;
         carousel.scrollTo({left: scrollAmount, behavior: "smooth"});
     });
+}
 
     // Close modals
     charClose.onclick = () => charModal.style.display = "none";
