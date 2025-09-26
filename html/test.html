@@ -1,178 +1,80 @@
-<html>
+<html lang="en">
 <head>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-        }
-        body {
-            background-color: lightcyan;
-            text-align: center;
-        }
-        .container {
-            height: 70vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .game {
-            height: 60vmin;
-            width: 60vmin;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1.5vmin;
-            justify-content: center;
-        }
-        .box {
-            height: 18vmin;
-            width: 18vmin;
-            border-radius: 1rem;
-            border: none;
-            box-shadow: 0 0 1rem rgba(0,0,0,0.3);
-            font-size: 8vmin;
-            color: red;
-            background-color: yellow;
-        }
-        #reset {
-            padding: 1rem;
-            font-size: 1.25rem;
-            background: #191913;
-            color: white;
-            border-radius: 1rem;
-            border: none;
-        }
-        .box:hover {
-            background-color: chocolate;
-        }
-        #new-btn {
-            padding: 1rem;
-            font-size: 1.25rem;
-            background: #191913;
-            color: white;
-            border-radius: 1rem;
-            border: none;
-        }
-        #msg {
-            font-size: 8vmin;
-        }
-        .msg-container {
-            height: 30vmin;
-        }
-        .hide {
-            display: none;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cosplay</title>
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/cosplay.css">
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <style>
+    /* Quick demo styles for the cards */
+    .carousel-container {
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+    }
+    .carousel {
+      display: flex;
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+    }
+    .card {
+      flex: 0 0 auto;
+      width: 200px;
+      margin-right: 10px;
+      background: #fff;
+      border: 2px solid #000;
+      text-align: center;
+      font-family: 'Press Start 2P', monospace;
+    }
+    .card img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .carousel-nav {
+      background: #000;
+      color: #fff;
+      border: none;
+      font-size: 2rem;
+      padding: 0.5rem 1rem;
+      cursor: pointer;
+      z-index: 2;
+    }
+  </style>
 </head>
-<body>
-    <div class="msg-container hide">
-        <p id="msg">Winner</p>
-        <button id="new-btn">New Game</button>
-    </div>
-    <main>
-        <h1>Tic Tac Toe</h1>
-        <div class="container">
-            <div class="game">
-                <button class="box"></button>
-                <button class="box"></button>
-                <button class="box"></button>
-                <button class="box"></button>
-                <button class="box"></button>
-                <button class="box"></button>
-                <button class="box"></button>
-                <button class="box"></button>
-                <button class="box"></button>
-            </div>
+<body class="layout-2col">
+
+  <header>
+    <h1>yayitssofie's cosplay</h1>
+  </header>
+
+  <main>
+    <!-- Carousel with prev/next buttons -->
+    <div class="carousel-container">
+      <button id="prev-btn" class="carousel-nav">&lt;</button>
+      <div id="cosplay-carousel" class="carousel">
+        <div class="card">
+          <img src="https://via.placeholder.com/200x250/87CEFA/000000?text=Killer+Frost" alt="Killer Frost">
+          <p>Killer Frost</p>
         </div>
-        <button id="reset">Reset Game</button>
-    </main>
-    <script>
-        let boxes = [...document.querySelectorAll('.box')];
-        let resetBtn = document.querySelector('#reset');
-        let turnO = true; // Player O starts
-        let newGameBtn = document.querySelector('#new-btn');
-        let msgContainer = document.querySelector('.msg-container');
-        let msg = document.querySelector('#msg');
+        <div class="card">
+          <img src="https://via.placeholder.com/200x250/FF69B4/000000?text=Asuka" alt="Asuka">
+          <p>Asuka</p>
+        </div>
+        <div class="card">
+          <img src="https://via.placeholder.com/200x250/98FB98/000000?text=Harley+Quinn" alt="Harley Quinn">
+          <p>Harley Quinn</p>
+        </div>
+      </div>
+      <button id="next-btn" class="carousel-nav">&gt;</button>
+    </div>
+  </main>
 
-        const winPatterns = [
-            [0, 1, 2],
-            [0, 3, 6],
-            [0, 4, 8],
-            [1, 4, 7],
-            [2, 5, 8],
-            [2, 4, 6],
-            [3, 4, 5],
-            [6, 7, 8]
-        ];
+  <footer>&copy; 2025 avanceNAcs</footer>
 
-        boxes.forEach((box) => {
-            box.addEventListener('click', function () {
-                if (turnO) {
-                    box.innerText = 'O';
-                    box.style.color = 'green';
-                    turnO = false;
-                    box.disabled = true;
-                    checkWinner();
-                } else {
-                    box.innerText = 'X';
-                    box.style.color = 'black';
-                    turnO = true;
-                    box.disabled = true;
-                    checkWinner();
-                }
-            });
-        });
-
-        const enableBoxes = () => {
-            for (let box of boxes) {
-                box.disabled = false;
-                box.innerText = "";
-            }
-        };
-
-        const disableBoxes = () => {
-            for (let box of boxes) {
-                box.disabled = true;
-            }
-        };
-
-        const showWinner = (winner) => {
-            msg.innerText = `Congratulations, Winner is ${winner}`;
-            msgContainer.classList.remove('hide');
-            disableBoxes();
-        };
-
-        const checkWinner = () => {
-            let hasWin = false;
-            for (let pattern of winPatterns) {
-                let pos1Val = boxes[pattern[0]].innerText;
-                let pos2Val = boxes[pattern[1]].innerText;
-                let pos3Val = boxes[pattern[2]].innerText;
-
-                if (pos1Val !== "" && pos2Val!=="" && pos3Val!=="" && 
-                    pos1Val === pos2Val && pos2Val === pos3Val) {
-                    showWinner(pos1Val);
-                    hasWin = true;
-                    return;
-                }
-            }
-
-            if (!hasWin) {
-                const allBoxes = [...boxes].every((box) => box.innerText !== "");
-                if (allBoxes) {
-                    msgContainer.classList.remove('hide');
-                    msg.innerText = 'Match Drawn';
-                }
-            }
-        };
-
-        const resetGame = () => {
-            turnO = true;
-            enableBoxes();
-            msgContainer.classList.add('hide');
-        };
-
-        newGameBtn.addEventListener('click', resetGame);
-        resetBtn.addEventListener('click', resetGame);
-    </script>
+  <script src="../js/cosplay.js" defer></script>
 </body>
 </html>
