@@ -23,6 +23,39 @@ document.addEventListener("DOMContentLoaded", () => {
 
     let scrollAmount = 0;
 
+    // ✅ Shared helper
+    function getCardWidth() {
+        const card = carousel.querySelector(".card");
+        if (!card) return 0;
+        const style = window.getComputedStyle(card);
+        return card.offsetWidth + parseInt(style.marginRight);
+    }
+
+    // ✅ Wrap-around scroll helper
+    function scrollNext() {
+        const cardWidth = getCardWidth();
+        const maxScroll = carousel.scrollWidth - carousel.clientWidth;
+        scrollAmount += cardWidth;
+
+        if (scrollAmount > maxScroll) {
+            scrollAmount = 0; // wrap back to start
+        }
+
+        carousel.scrollTo({ left: scrollAmount, behavior: "smooth" });
+    }
+
+    function scrollPrev() {
+        const cardWidth = getCardWidth();
+        const maxScroll = carousel.scrollWidth - carousel.clientWidth;
+        scrollAmount -= cardWidth;
+
+        if (scrollAmount < 0) {
+            scrollAmount = maxScroll; // wrap to end
+        }
+
+        carousel.scrollTo({ left: scrollAmount, behavior: "smooth" });
+    }
+
     // Load JSON
     fetch("/data/cosplay.json")
         .then(res => res.json())
@@ -31,7 +64,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 const card = document.createElement("div");
                 card.className = "card";
 
-                if(c.card){ // regular flip card
+                if (c.card) { // regular flip card
                     const cardInner = document.createElement("div");
                     cardInner.className = "card-inner";
 
@@ -94,73 +127,52 @@ document.addEventListener("DOMContentLoaded", () => {
         })
         .catch(err => console.error("Failed to load cosplay.json:", err));
 
+    // Detect touch support
     function hasTouchSupport() {
-  return ('ontouchstart' in document.documentElement);
-}
+        return ("ontouchstart" in document.documentElement);
+    }
 
-if (hasTouchSupport()) {
-  // Code for touch-enabled devices (likely mobile)
-    const swipeContainer = document.querySelector('.swipe-container');
-let startX;
+    if (hasTouchSupport()) {
+        // ✅ Touch swipe (mobile)
+        const swipeContainer = carousel;
+        let startX, startY;
 
-swipeContainer.addEventListener('touchstart', (e) => {
-  startX = e.touches[0].clientX;
-});
+        swipeContainer.addEventListener("touchstart", (e) => {
+            startX = e.touches[0].clientX;
+            startY = e.touches[0].clientY;
+        });
 
-swipeContainer.addEventListener('touchend', (e) => {
-  const endX = e.changedTouches[0].clientX;
-  const diffX = startX - endX;
+        swipeContainer.addEventListener("touchend", (e) => {
+            const endX = e.changedTouches[0].clientX;
+            const endY = e.changedTouches[0].clientY;
 
-  if (Math.abs(diffX) > 50) { // Define a threshold for swipe detection
-    if (diffX > 0) {
-      console.log('Swiped left');
-      // Add logic for left swipe
-        const cardWidth = getCardWidth();
-        scrollAmount += cardWidth;
-        if(scrollAmount > carousel.scrollWidth - carousel.clientWidth) scrollAmount = carousel.scrollWidth - carousel.clientWidth;
-        carousel.scrollTo({left: scrollAmount, behavior: "smooth"});
+            const diffX = startX - endX;
+            const diffY = startY - endY;
+
+            // Only trigger if mostly horizontal
+            if (Math.abs(diffX) > Math.abs(diffY) && Math.abs(diffX) > 50) {
+                if (diffX > 0) {
+                    console.log("Swiped left");
+                    scrollNext();
+                } else {
+                    console.log("Swiped right");
+                    scrollPrev();
+                }
+            }
+        });
+
     } else {
-      console.log('Swiped right');
-      // Add logic for right swipe
-        const cardWidth = getCardWidth();
-        scrollAmount -= cardWidth;
-        if(scrollAmount < 0) scrollAmount = 0;
-        carousel.scrollTo({left: scrollAmount, behavior: "smooth"});
-    }
-  }
-});
-
-} else {
-  // Code for non-touch devices
-    // Carousel scrolling
-    function getCardWidth(){
-        const card = carousel.querySelector(".card");
-        if(!card) return 0;
-        const style = window.getComputedStyle(card);
-        return card.offsetWidth + parseInt(style.marginRight);
+        // ✅ Non-touch: button controls (desktop)
+        nextBtn.addEventListener("click", scrollNext);
+        prevBtn.addEventListener("click", scrollPrev);
     }
 
-    nextBtn.addEventListener("click", () => {
-        const cardWidth = getCardWidth();
-        scrollAmount += cardWidth;
-        if(scrollAmount > carousel.scrollWidth - carousel.clientWidth) scrollAmount = carousel.scrollWidth - carousel.clientWidth;
-        carousel.scrollTo({left: scrollAmount, behavior: "smooth"});
-    });
-
-    prevBtn.addEventListener("click", () => {
-        const cardWidth = getCardWidth();
-        scrollAmount -= cardWidth;
-        if(scrollAmount < 0) scrollAmount = 0;
-        carousel.scrollTo({left: scrollAmount, behavior: "smooth"});
-    });
-}
-
-    // Close modals
+    // ✅ Close modals
     charClose.onclick = () => charModal.style.display = "none";
     cosplayClose.onclick = () => cosplayModal.style.display = "none";
     window.onclick = e => {
-        if(e.target === charModal) charModal.style.display = "none";
-        if(e.target === cosplayModal) cosplayModal.style.display = "none";
+        if (e.target === charModal) charModal.style.display = "none";
+        if (e.target === cosplayModal) cosplayModal.style.display = "none";
     };
 
 });
