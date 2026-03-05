@@ -29,7 +29,7 @@ header, nav, main, aside, footer {
 /* ---------- LAYOUT AREAS ---------- */
 header { grid-area: header; padding: 0.5rem; background: linear-gradient(to right,#c7a4c9,#85a2dd); opacity: 60%; text-align: center; }
 footer { grid-area: footer; padding: 0.5rem; background: #eee; opacity: 50%; text-align: center; font-size: 0.9rem; }
-nav { grid-area: nav; padding: 0.5rem; background: #dcdcdc; }
+nav { grid-area: nav; padding: 0.3rem; background: #dcdcdc; }
 main { grid-area: main; padding: 0.5rem; background: #ffafc0; }
 aside { grid-area: aside1; padding: 0.5rem; background: #c7a4c9; }
 aside#aside2 { grid-area: aside2; background: #c7a4c9; }
@@ -48,7 +48,7 @@ body.layout-2col {
 
 body.layout-3col {
     display: grid;
-    grid-template-columns: 60% 40%;
+    grid-template-columns: 150px 1fr 150px; /* Reduce nav width */
     grid-template-rows: auto auto auto auto auto;
     grid-template-areas:
         "header header"
@@ -89,7 +89,7 @@ body.layout-3col {
             "footer footer";
     }
     body.layout-3col {
-        grid-template-columns: 200px 1fr 200px;
+        grid-template-columns: 150px 1fr 150px; /* Reduce nav width */
         grid-template-areas:
             "header header header"
             "nav main aside2"
@@ -99,13 +99,13 @@ body.layout-3col {
 }
 
 /* ---------- NAVIGATION ---------- */
-nav h4 { font-size: 0.7rem; margin-bottom: 0.5rem; }
+nav h4 { font-size: 0.6rem; margin-bottom: 0.5rem; }
 .navLink {
     display: flex;
     align-items: center;
     gap: 0.3rem;
-    padding: 0.3rem;
-    margin: 0.2rem 0;
+    padding: 0.2rem;
+    margin: 0.1rem 0;
     background: #e0e0e0;
     border: 2px outset #fff;
     text-decoration: none;
@@ -113,7 +113,7 @@ nav h4 { font-size: 0.7rem; margin-bottom: 0.5rem; }
     font-size: 10px;
 }
 .navLink:hover { background: #bfbfbf; }
-.navLink img { width: 30px; height: 30px; }
+.navLink img { width: 20px; height: 20px; }
 
 /* ---------- TYPOGRAPHY ---------- */
 h1 { font-size: 20px; margin-bottom: 0.5rem; }
