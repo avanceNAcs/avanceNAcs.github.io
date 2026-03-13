@@ -51,16 +51,16 @@
     <main>
         <article>
             <h2>~ welcome ~</h2>
-            <p>Hi! I’m <strong>Sofia Avanceña</strong>.<br>
-                I’ve been coding since 2018 and love mixing creativity with tech.<br>
+            <p>Hi! I'm <strong>Sofia Avanceña</strong>.<br>
+                I've been coding since 2018 and love mixing creativity with tech.<br>
                 This portfolio is a collection of my projects, from coding experiments to cosplay tutorials.</p>
         </article>
 
         <!-- About Me -->
         <section id="about">
             <h3>About Me</h3>
-            <p>I’m a developer and designer who enjoys building playful and interactive experiences.
-                When I’m not coding, you’ll find me eating, cosplaying, consuming media, or listening to music. I enrolled in ECE to pursue my dreams of teaching kids.</p>
+            <p>I'm a developer and designer who enjoys building playful and interactive experiences.
+                When I'm not coding, you'll find me eating, cosplaying, consuming media, or listening to music. I enrolled in ECE to pursue my dreams of teaching kids.</p>
         </section>
 
         <!-- Skills -->
@@ -128,24 +128,8 @@
     </footer>
 
     <!-- SCRIPTS -->
-<button onclick="changeTheme()">Switch Theme</button>
-<script>
-    let isProTheme = false;
-
-    function changeTheme() {
-        const themeLink = document.getElementById('theme-stylesheet');
-        
-        if (isProTheme) {
-            // Revert to original theme
-            themeLink.setAttribute('href', '../css/styles.css');
-            isProTheme = false;
-        } else {
-            // Switch to professional theme
-            themeLink.setAttribute('href', '../css/professional.css');
-            isProTheme = true;
-        }
-    }
-</script>
+    <button onclick="changeTheme()">Switch Theme</button>
+    <script src="../js/themeToggle.js"></script>
     <script src="../js/dateWidget.js"></script>
     <script src="../js/audio.js"></script>
     <script src="../js/navbar.js"></script>
