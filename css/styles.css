@@ -133,3 +133,22 @@ button {
     display: inline-block;
 }
 button:active { border: 2px inset #fff; background: #bfbfbf; }
+
+/* ---------- CARDS ---------- */
+.face,
+.face * {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.card:not(.flipped) .back,
+.card.flipped .front {
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.card:not(.flipped) .front,
+.card.flipped .back {
+  visibility: visible;
+  pointer-events: auto;
+}
